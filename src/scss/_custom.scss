@@ -1,0 +1,26 @@
+@import 'variables';
+
+// 1. Your custom variables and variable overwrites.
+$global-font-family: 'Roboto', Arial, sans-serif;
+
+$base-body-font-weight: normal; 
+
+
+$container-max-width: 1250px;
+$base-link-text-decoration: underline;
+$base-link-hover-text-decoration: none;
+
+$global-border: #ddd;
+
+body {
+    background: linear-gradient(to right, #222C42, #121726);
+}
+
+// 3. Your custom mixin overwrites.
+
+@import 'variables';
+
+.slider-nav {
+    display: inline-block !important;
+    visibility: visible !important;
+}
