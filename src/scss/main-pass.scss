@@ -42,8 +42,9 @@
 .header_right {
     display: flex;
     align-items: center;
-    width: 40%;
-    justify-content: space-around;
+    width: 33%;
+    justify-content: space-between;
+
     :nth-child(n) {
         display: flex;
     }
@@ -56,4 +57,115 @@
 
 .header_weather_icon {
     margin-right: 10px;
+}
+
+.title-decore {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: -25px;
+        width: 54px;
+        height: 7px;
+        background-color: #3980D9;
+    }
+}
+
+.home_main_slider {
+    max-width: 525px;
+    position: relative;
+    padding-top: 10px;
+
+    &_item_title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 1.2em;
+        color: #000000;
+        line-height: 1.2em;
+        margin-bottom: 25px;
+    }
+
+    &_item_content {
+        font-size: 18px;
+        max-width: 270px;
+        line-height: 1.2em;
+    }
+
+    .slick-dots {
+        text-align: left;
+        bottom: -40px;
+    }
+
+    .slick-dots li {
+        height: 3px;
+        width: 36px;
+        background: #3980D9;
+        opacity: 0.2;
+
+    }
+
+    .slick-dots li.slick-active {
+        opacity: 1;
+    }
+
+}
+
+.home_wrap {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 130px 0 50px 0;
+
+    &_left {
+        width: 60%;
+        padding-left: 150px;
+        box-sizing: border-box;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "LPK";
+            left: 0;
+            top: -125px;
+            font-size: 17rem;
+            z-index: 0;
+            color: #3980D9;
+            opacity: 0.05;
+            font-weight: bold;
+        }
+    }
+
+
+    &_right {
+        width: 33%;
+
+        &_buy-ticket {
+            display: block;
+            padding: 20px 65px;
+            background-color: #3980D9;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            max-width: 245px;
+            text-align: center;
+        }
+
+        &_schedule {
+            display: inline-block;
+            width: 245px;
+            text-align: right;
+            margin-top: 25px;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px dashed black;
+        }
+    }
 }
