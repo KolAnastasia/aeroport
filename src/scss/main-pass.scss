@@ -1,8 +1,13 @@
+.header {
+    position: relative;
+}
+
 .header-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 25px 0;
+    position: relative;
 }
 
 .header_left {
@@ -85,11 +90,12 @@
         color: #000000;
         line-height: 1.2em;
         margin-bottom: 25px;
+        margin-top: 0;
     }
 
     &_item_content {
         font-size: 18px;
-        max-width: 270px;
+        max-width: 320px;
         line-height: 1.2em;
     }
 
@@ -145,7 +151,7 @@
 
         &_buy-ticket {
             display: block;
-            padding: 20px 65px;
+            padding: 20px;
             background-color: #3980D9;
             font-style: normal;
             font-weight: bold;
@@ -163,9 +169,57 @@
             width: 245px;
             text-align: right;
             margin-top: 25px;
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px dashed black;
+
+            a {
+                display: inline-block;
+                border-bottom: 1px dashed black;
+                color: #000;
+                text-decoration: none;
+            }
         }
     }
+}
+
+.home_wrap_right_more {
+    width: 245px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
+
+.home_wrap_right_more_item:hover::before {
+    position: absolute;
+    background-image: url(./../img/logo.png);
+    bottom: 100%;
+    left: 50%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-size: 100% 100%;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #000000;
+    width: max-content;
+    padding: 15px 30px;
+}
+
+.how-get {
+    display: inline-block;
+    margin-right: 35px;
+    position: relative;
+}
+
+.how-get.home_wrap_right_more_item:hover::before {
+    content: "Как добраться";
+}
+
+.home_wrap_right_about-airport:hover::before {
+    content: "Об аэропорте";
+}
+
+.home_wrap_right_about-airport {
+    position: relative;
+    display: inline-block;
 }
