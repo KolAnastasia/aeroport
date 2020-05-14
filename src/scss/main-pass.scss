@@ -2,4 +2,58 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 25px 0;
+}
+
+.header_left {
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.header_logo {
+    margin-right: 90px;
+}
+
+.header_top_link {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    // font-family: "Montserrat", "Times New Roman", serif;
+}
+
+.header_number_link {
+    color: #000000;
+}
+
+.header_number {
+    margin-right: 125px;
+}
+
+.header_switch_link--active {
+    color: #3980D9;
+}
+
+.header_switch_link {
+    color: #DADADA;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+    :nth-child(n) {
+        display: flex;
+    }
+}
+
+
+.header_right_child-left {
+    margin-right: 20px;
+}
+
+.header_weather_icon {
+    margin-right: 10px;
 }

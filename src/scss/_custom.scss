@@ -7,11 +7,12 @@ body {
     font-weight: normal;
 }
 
-.page__wrapper {
-    max-width: 1315px;
+.page_wrapper {
+    max-width: 1270px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 // 3. Your custom mixin overwrites.
-
 @import 'variables';
+@import 'slick-carousel/slick/slick-theme.scss'
