@@ -78,7 +78,7 @@
     }
 }
 
-.home_main_slider {
+.main-option_slider {
     max-width: 525px;
     position: relative;
     padding-top: 10px;
@@ -118,7 +118,7 @@
 
 }
 
-.home_wrap {
+.main-option {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
@@ -180,17 +180,17 @@
     }
 }
 
-.home_wrap_right_more {
+.main-option_right_more {
     width: 245px;
     display: flex;
     justify-content: flex-end;
     margin-top: 80px;
 }
 
-.home_wrap_right_more_item:hover::before {
+.main-option_right_more_item:hover::before {
     position: absolute;
-    background-image: url(./../img/logo.png);
-    bottom: 100%;
+    background-image: url(./../img/cite.svg);
+    bottom: calc(100% + 10px);
     left: 50%;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -211,15 +211,131 @@
     position: relative;
 }
 
-.how-get.home_wrap_right_more_item:hover::before {
+.how-get.main-option_right_more_item:hover::before {
     content: "Как добраться";
 }
 
-.home_wrap_right_about-airport:hover::before {
+.main-option_right_about-airport:hover::before {
     content: "Об аэропорте";
 }
 
-.home_wrap_right_about-airport {
+.main-option_right_about-airport {
     position: relative;
     display: inline-block;
+}
+
+.main_online-shelude_top {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.main_online-shelude_top_btn-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.main_online-shelude_table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main_online-shelude_table_row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main_online-shelude_table_row:first-of-type div{
+    font-weight: normal;
+    color: rgba(256, 256, 256, 0.7);
+}
+
+.main_online-shelude_table_row_wrap {
+    display: flex;
+    flex-grow: 6;
+}
+
+.main_online-shelude_table_row div {
+    text-align: left;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: 100%;
+    padding: 15px 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.main-option_online-shelude {
+    width: 100%;
+}
+
+.main_online-shelude {
+    background: #3980D9;
+    padding: 75px 80px;
+    color: #fff;
+}
+
+.main_online-shelude_table_row:nth-of-type(2n-1) {
+    background: rgba(256, 256, 256, 0.2);
+}
+
+.main_online-shelude_top_title {
+    margin: 0;
+    font-size: 36px;
+}
+
+.main_online-shelude_top_date {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.main_online-shelude_top_date_span {
+    display: inline-block;
+    margin: 0 50px 0 15px;
+    font-weight: bold;
+}
+
+
+.main_online-shelude_top_btn {
+    padding: 15px 35px;
+    border: 1px solid #ffffff;
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.main_online-shelude_top_btn.active-btn {
+    font-weight: bold;
+    opacity: 1;
+    padding-top: 16px;
+}
+
+.main_online-shelude_top_btn-left {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-right: -1px;
+}
+
+.main_online-shelude_top_btn-right {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.main_online-shelude_table_row_left {
+    width: 10%;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    margin-right: 45px;
+}
+
+.main_online-shelude_table_row_wrap div:nth-of-type(3) {
+    width: 120%;
 }
