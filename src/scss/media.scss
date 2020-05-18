@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 981px) {
+  .main_online-shelude_table_row:first-of-type {
+    display: none;
+  }
+
+  .main_online-shelude_table_row_wrap {
+    display: block;
+  }
+
+  .main_online-shelude_table_row {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 50px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .main_online-shelude_table_row:nth-of-type(2n-1),
+  .main_online-shelude_table_row:nth-of-type(2n) {
+    background: rgba(256, 256, 256, 1);
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}

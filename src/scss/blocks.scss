@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.header_menu {
+  cursor: pointer;
+}
+
 .main_search-wrap {
   position: absolute;
   left: 0;
@@ -71,4 +75,46 @@
   position: relative;
   font-size: 36px;
   font-weight: bold;
+}
+
+.footer {
+  background: #102743;
+  padding: 50px 0;
+}
+
+.footer_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer_right {
+  max-width: 255px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer_contact_title {
+  color: #ffffff;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.footer_contact_content a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.footer_soc_vk {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.header_language.header_right_child-left a {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
 }
