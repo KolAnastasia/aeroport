@@ -169,6 +169,7 @@
             padding: 20px;
             background-color: #3980D9;
             font-style: normal;
+            border: 2px solid transparent;
             font-weight: bold;
             font-size: 14px;
             color: #fff;
@@ -177,8 +178,10 @@
             letter-spacing: 0.05em;
             max-width: 245px;
             text-align: center;
+            transition: .2s ease-in-out;
             &:hover {
-                background-color: #25599a;
+                background-color: #256AC1;
+                transition: .2s ease-in-out;
             }
         }
 
@@ -193,9 +196,12 @@
                 border-bottom: 1px dashed black;
                 color: #000;
                 text-decoration: none;
+                transition: .1s ease-in-out;
 
                 &:hover {
-                    border-bottom: 1px dashed transparent;
+                    border-bottom: 1px dashed #3980D9;
+                    color: #3980D9;
+                    transition: .1s ease-in-out;
                 }
             }
         }
@@ -327,16 +333,22 @@
 
 .main_online-shelude_top_btn {
     padding: 15px 35px;
-    border: 1px solid #ffffff;
+    border: 1px solid  rgba(256, 256, 256, 0.5);
     text-transform: uppercase;
-    opacity: 0.5;
+    color: rgba(256, 256, 256, 0.5);
     font-size: 14px;
     cursor: pointer;
+    width: 140px;
+    text-align: center;
+    &:hover {
+        color: rgba(256, 256, 256, 1);
+    }
 }
 
 .main_online-shelude_top_btn.active-btn {
     font-weight: bold;
-    opacity: 1;
+    border: 1px solid  rgba(256, 256, 256, 1);
+    color: rgba(256, 256, 256, 1);
     padding-top: 16px;
 }
 
@@ -423,15 +435,23 @@ div.main_online-shelude_table_row_left {
 
 .main_online-shelude_more_wrap_btn {
     display: inline-block;
-    padding: 21px 50px;
+    padding: 21px 40px;
     text-decoration: none;
     color: #3980D9;
     background-color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
+    text-align: center;
     font-weight: bold;
     letter-spacing: 0.1em;
-    width: 320px;
+    transition: .2s ease-in-out;
+    border: 1px solid transparent;
+    &:hover {
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        transition: .2s ease-in-out;
+    }
 }
 
 .main_online-shelude_more_wrap_decore {
@@ -455,6 +475,10 @@ div.main_online-shelude_table_row_left {
     top: 50%;
     transform: translateY(-50%);
     background-size: contain;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .online-shelude_slider-arrow-l {
@@ -578,6 +602,9 @@ div.main_online-shelude_table_row_left {
     line-height: 1.2;
     color: #000000;
     text-decoration: none;
+    &:hover {
+        color: #3980D9;
+    }
   }
 
 .main_news_item {
@@ -590,4 +617,7 @@ div.main_online-shelude_table_row_left {
     color: #3980D9;
     font-size: 14px;
     font-weight: bold;
+    &:hover {
+        text-decoration: none;
+    }
 }

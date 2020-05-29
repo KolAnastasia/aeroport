@@ -15,6 +15,8 @@
     grid-gap: 50px;
     max-width: 500px;
     margin: 0 auto;
+    padding: 20px 0;
+    align-items: flex-start;
   }
 
   .main_online-shelude_table_row:nth-of-type(2n-1),
@@ -22,5 +24,56 @@
     background: rgba(256, 256, 256, 1);
     margin-bottom: 20px;
     border-radius: 5px;
+    color: #333333;
   }
+
+  .main_online-shelude_table_row div {
+    font-weight: normal;
+    padding: 0 5px 0 15px;
+    margin-bottom: 10px;
+
+    &:nth-of-type(3) {
+      font-weight: bold;
+    }
+  }
+
+  div.main_online-shelude_table_row_left {
+    font-weight: bold;
+  }
+
+  .online-shelude_value-status {
+    font-weight: bold;
+  }
+
+  .online-shelude_value-status::before {
+    display: none;
+  }
+
+  .online-shelude_value-status-in {
+    color: #39D9A9;
+  }
+
+  .online-shelude_value-status-out {
+    color: #F2E07B;
+  }
+
+  .online-shelude_value-status-cancel {
+    color: #F36F76;
+  }
+
+  .online-shelude_value-status-reg {
+    color: #F2AD7B;
+  }
+
+  .main_online-shelude_top_date_span {
+    margin: 0 30px 0 15px;
+  }
+
+  .main_online-shelude_top {
+    flex-direction: column;
+}
+
+.main_online-shelude_top_title {
+  margin-bottom: 35px;
+}
 }

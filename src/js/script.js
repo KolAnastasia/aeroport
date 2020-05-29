@@ -31,5 +31,13 @@ $(document).ready(function () {
 		$('.main_online-shelude_table').removeClass('active')
 		var num = $(this).attr('data-n');
 		$('#main_online-shelude_table'+num).addClass('active')
-	});
+  });
+  
+  $('.header_menu').click(function() {
+    $('.header_menu-r').toggleClass('active')
+  })
+
+  $('.close-menu').click(function() {
+    $('.header_menu-r').removeClass('active')
+  })
 });

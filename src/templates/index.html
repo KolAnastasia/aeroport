@@ -12,6 +12,8 @@
 </head>
 
 <body class="page">
+    <div class="window-visible win--vis"></div>
+    <div class="main-page-wrap">
     <div class="main_search-wrap">
         <form class="main_search-form">
             <input type="text" class="main_search-input" placeholder="Поиск">
@@ -25,9 +27,56 @@
             </div>
         </form>
     </div>
-    <div class="page_wrapper">
-        <header class="header">
+    <div class="header_menu-r">
+        <div class="header_menu_tel">
+            <a href="tel:+74742331268">+7 (4742) 33-12-68</a>
+        </div>
+        <div class="close-menu"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1.00024" y="17" width="23" height="2" transform="rotate(-45 1.00024 17)" fill="white"/>
+            <rect x="2.00024" y="1" width="23" height="2" transform="rotate(45 2.00024 1)" fill="white"/>
+            </svg>
+            </div>
+        <ul class="header_menu-wrap">
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Онлайн-табло рейсов</a></li>
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Купить билеты</a></li>
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Услуги</a></li>
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Сезонное расписание</a></li>
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Об аэропорте</a></li>
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Информация</a></li>
+            <li class="header_menu_item"><a href="#" class="header_menu_link">Контакты</a></li>
+        </ul>
+        <div class="header_menu_feedback">
+            Обратная связь
+        </div>
+        <div class="header_menu_soc">
+            <a href="#" class="header_menu_soc_link">
+                <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.1" cx="29.5" cy="29.5" r="29.5" fill="white" />
+                    <path
+                        d="M41.4302 25.0172C41.602 24.4312 41.4302 24 40.6041 24H37.8706C37.1744 24 36.8542 24.3703 36.6825 24.7828C36.6825 24.7828 35.2902 28.2094 33.3224 30.4312C32.6866 31.0734 32.3942 31.2797 32.0461 31.2797C31.8744 31.2797 31.6099 31.0734 31.6099 30.4875V25.0172C31.6099 24.3141 31.415 24 30.8395 24H26.5419C26.1056 24 25.8457 24.3281 25.8457 24.6328C25.8457 25.2984 26.8296 25.4531 26.9317 27.3281V31.3969C26.9317 32.2875 26.7739 32.4516 26.4259 32.4516C25.4977 32.4516 23.2421 29.0109 21.9055 25.0734C21.6364 24.3094 21.3718 24 20.671 24H17.9375C17.1578 24 17 24.3703 17 24.7828C17 25.5141 17.9282 29.1469 21.3208 33.9469C23.5809 37.2234 26.7647 39 29.6607 39C31.401 39 31.6145 38.6063 31.6145 37.9266C31.6145 34.7953 31.4567 34.5 32.3292 34.5C32.733 34.5 33.4291 34.7063 35.0535 36.2859C36.9099 38.1609 37.2162 39 38.2558 39H40.9893C41.769 39 42.1635 38.6062 41.9361 37.8281C41.4163 36.1922 37.9031 32.8266 37.7453 32.6016C37.3415 32.0766 37.4575 31.8422 37.7453 31.3734C37.7499 31.3688 41.0868 26.625 41.4302 25.0172Z"
+                        fill="white" />
+                </svg>
 
+            </a>
+            <a href="#" class="header_menu_soc_link">
+                <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.1" cx="29.5" cy="29.5" r="29.5" fill="white" />
+                    <path
+                        d="M34.4805 20H25.5191C22.4759 20 20 22.3522 20 25.2433V33.7566C20 36.6478 22.4759 38.9999 25.5191 38.9999H34.4805C37.524 38.9999 39.9999 36.6477 39.9999 33.7566V25.2433C40 22.3522 37.524 20 34.4805 20ZM38.2255 33.7566C38.2255 35.7183 36.5455 37.3141 34.4806 37.3141H25.5191C23.4543 37.3142 21.7745 35.7183 21.7745 33.7566V25.2433C21.7745 23.2817 23.4543 21.6858 25.5191 21.6858H34.4805C36.5454 21.6858 38.2254 23.2817 38.2254 25.2433V33.7566H38.2255Z"
+                        fill="white" />
+                    <path
+                        d="M29.9989 24.6046C27.1573 24.6046 24.8455 26.8008 24.8455 29.5003C24.8455 32.1998 27.1573 34.3959 29.9989 34.3959C32.8406 34.3959 35.1524 32.1998 35.1524 29.5003C35.1524 26.8008 32.8406 24.6046 29.9989 24.6046ZM29.9989 32.71C28.1358 32.71 26.6199 31.2702 26.6199 29.5002C26.6199 27.7302 28.1357 26.2902 29.9989 26.2902C31.8621 26.2902 33.3779 27.7302 33.3779 29.5002C33.3779 31.2702 31.862 32.71 29.9989 32.71Z"
+                        fill="white" />
+                    <path
+                        d="M35.3701 23.1746C35.0283 23.1746 34.6924 23.3061 34.451 23.5365C34.2083 23.7657 34.0688 24.0849 34.0688 24.4108C34.0688 24.7357 34.2084 25.0548 34.451 25.2852C34.6923 25.5144 35.0283 25.647 35.3701 25.647C35.7132 25.647 36.048 25.5144 36.2905 25.2852C36.533 25.0548 36.6714 24.7356 36.6714 24.4108C36.6714 24.0849 36.533 23.7657 36.2905 23.5365C36.0492 23.3061 35.7132 23.1746 35.3701 23.1746Z"
+                        fill="white" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="page_wrapper">
+       
+        <header class="header">
             <div class="header-container">
                 <div class="header_left">
                     <div class="header_logo">
@@ -92,7 +141,9 @@
                             </svg>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </header>
         <main class="home">
@@ -484,7 +535,7 @@
         </div>
     </footer>
     </div>
-
+</div>
     <script src="../bundle.js"></script>
 </body>
 
