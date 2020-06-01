@@ -1,0 +1,78 @@
+.shelude-inner-top_wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .inner_top_content {
+        display: flex;
+        align-items: center;
+    }
+
+    .inner_top_btn-wrap {
+        display: flex;
+    }
+
+    .inner_top_btn-wrap {
+        display: flex;
+    }
+
+    .inner_top_calendar {
+        height: 50px;
+        border: 1px solid rgba(256, 256, 256, 0.5);
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 15px 20px;
+        background: transparent;
+        color: #FFFFFF;
+
+        &::placeholder {
+            color: rgba(256, 256, 256, 0.5);
+        }
+
+        &:active::placeholder {
+            color: transparent;
+        }
+
+        &:focus {
+            outline: #FFFFFF;
+        }
+
+        &-wrap {
+        position: relative;        
+        margin-right: 80px;
+       
+        &::after {
+            position: absolute;
+            content: '';
+            background: url("../img/calendar-icon.svg") no-repeat center;
+            background-size: contain;
+            width: 15px;
+            height: 15px;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    }
+}
+
+.seasonal_shelude_table {
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.seasonal_schedule_table-wrap {
+    overflow-x: auto;
+}
+
+.seasonal_shelude_table_row td {
+    padding: 17px 0 17px 30px;
+}
+
+
+.seasonal_shelude_table_title {
+    background: #F2F2F2;
+    font-weight: normal;
+}

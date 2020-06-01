@@ -1,6 +1,63 @@
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1115px) {
+  .main-option_left {
+    padding-left: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header_logo {
+    margin-right: 65px;
+}
+
+.seasonal_shelude_table_row td {
+  padding-left: 15px;
+}
+}
 
 @media screen and (max-width: 981px) {
+  .header {
+
+    &_left {
+      width: fit-content;
+    }
+
+    &_logo {
+      margin-right: 15px;
+      img {
+        width: 50px;
+      }
+    }
+
+    &_menu-r {
+      display: none;
+    }
+
+    &_number {
+      display: none;
+    }
+
+    &_switch {
+      display: none;
+    }
+
+    &_right {
+      width: fit-content;
+      .header_weather {
+        display: none;
+      }
+
+      &_center {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .main_online-shelude {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 75px 10px 85px 10px;
+  }
+
   .main_online-shelude_table_row:first-of-type {
     display: none;
   }
@@ -12,7 +69,7 @@
   .main_online-shelude_table_row {
     display: grid;
     grid-template-columns: max-content 1fr;
-    grid-gap: 50px;
+    grid-gap: 20px;
     max-width: 500px;
     margin: 0 auto;
     padding: 20px 0;
@@ -39,6 +96,8 @@
 
   div.main_online-shelude_table_row_left {
     font-weight: bold;
+    width: 100%;
+    margin-right: 0;
   }
 
   .online-shelude_value-status {
@@ -71,9 +130,225 @@
 
   .main_online-shelude_top {
     flex-direction: column;
+  }
+
+  .main_online-shelude_top_title {
+    margin-bottom: 35px;
+  }
+
+  .main_online-shelude_more {
+    max-width: 500px;
+    margin: 0 auto;
+
+    &_wrap_decore {
+      display: none;
+    }
+
+    &_wrap_btn {
+      min-width: 300px;
+      padding: 21px 20px;
+    }
+  }
+
+  .main-option {
+    &_slider {
+      max-width: initial;
+
+      &_item_content {
+        max-width: 100%;
+      }
+    }
+
+    &_left {
+      width: 100%;
+      margin-bottom: 50px;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &_right {
+      width: 100%;
+
+      &_schedule {
+        text-align: center;
+        width: 280px;
+      }
+
+      &_buy-ticket {
+        max-width: 280px;
+      }
+
+      &_more {
+        width: 280px;
+        margin-top: 35px;
+        justify-content: center;
+      }
+    }
+  }
+
+  .main_other-link_wrap {
+
+    justify-content: start;
+
+    .main_other-link_item {
+      margin-right: 20px;
+      margin-bottom: 15px;
+      max-width: 352px;
+      width: 50%;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .footer_wrap {
+    flex-direction: column;
+    align-items: center;
+
+    .footer_contact {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .footer_tel {
+      order: 1;
+    }
+
+    .footer_email {
+      order: 2;
+    }
+
+    .footer_soc {
+      order: 3;
+      margin-bottom: 30px;
+    }
+
+    .footer_right {
+      order: 4;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .footer_development {
+      order: 5;
+      text-align: center;
+    }
+  }
+
+  .shelude-inner-top_wrap {
+    display: block;
+
+    .inner_top_calendar-wrap {
+      width: fit-content;
+    }
+
+    .inner_top_content {
+      margin-top: 20px;
+    }
+
+  }
 }
 
-.main_online-shelude_top_title {
-  margin-bottom: 35px;
+@media screen and (max-width: 768px) {
+
+  .main_other-link_wrap {
+    justify-content: center;
+
+    .main_other-link_item {
+      width: 100%;
+      max-width: 500px;
+
+      &:nth-of-type(n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .shelude-inner-top_wrap {
+
+  .inner_top_calendar-wrap {
+   margin-bottom: 20px;;
+  }
+
+  .inner_top_content {
+    display: block;
+  }
 }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .main-option_slider_item {
+    &_title {
+    font-size: 24px;
+
+    &_content {
+      font-size: 14px;
+    }
+  }
+  }
+  .main_online-shelude_top_title {
+    font-size: 24px;
+  }
+
+  .main_online-shelude_top_btn-wrap {
+    display: block;
+
+    .main_online-shelude_btn-wrap {
+      margin-top: 55px;
+    }
+  }
+
+  .online-shelude_slider {
+    &-wrap {
+      padding: 0;
+
+      .slick-dots {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    &-arrow {
+      display: none;
+    }
+
+    &_item {
+      &_title {
+        font-size: 24px;
+      }
+
+      &_desc {
+        font-size: 14px;
+      }
+
+      &-wrap {
+        display: block;
+      }
+
+      &_decore {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 90px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+
+      &_content {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .main_news_item {
+    margin-right: 30px;
+  }
 }

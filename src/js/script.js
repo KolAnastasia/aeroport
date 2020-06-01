@@ -17,27 +17,33 @@ $(document).ready(function () {
 
   })
 
-  $('.header_search').click(function(event) {
+  $('.header_search').click(function (event) {
     $('.main_search-wrap').addClass('active-search');
     event.stopPropagation();
   });
 
-  $('.page_wrapper').click(function(){
+  $('.page_wrapper').click(function () {
     $('.main_search-wrap').removeClass('active-search')
   })
 
-  $('.main_online-shelude_top_btn').click(function(event) {
+  $('.main_online-shelude_top_btn').click(function (event) {
     $('.main_online-shelude_top_btn').toggleClass('active-btn')
-		$('.main_online-shelude_table').removeClass('active')
-		var num = $(this).attr('data-n');
-		$('#main_online-shelude_table'+num).addClass('active')
+    $('.main_online-shelude_table').removeClass('active')
+    var num = $(this).attr('data-n');
+    $('#main_online-shelude_table' + num).addClass('active')
   });
-  
-  $('.header_menu').click(function() {
+
+  $('.header_menu').click(function () {
     $('.header_menu-r').toggleClass('active')
   })
 
-  $('.close-menu').click(function() {
+  $('.close-menu').click(function () {
     $('.header_menu-r').removeClass('active')
   })
+
+  $('#inner_top_calendar').datepicker({
+    minDate: new Date()
+  })
+
 });
+
