@@ -45,5 +45,7 @@ $(document).ready(function () {
     minDate: new Date()
   })
 
+  $('.fancybox-img').fancybox();
+  
 });
 

@@ -230,20 +230,23 @@
     padding-left: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 
     .breadcrumb-item {
       position: relative;
-      margin-right: 20px;
+      padding-left: 20px;
+
       &::before {
         position: absolute;
         content: "-";
-        left: -12px;
+        left: 6px;
         top: 50%;
         transform: translateY(-50%);
         color: #fff;
       }
 
       &:first-of-type {
+        padding-left: 0;
         &::before {
           display: none;
         }
@@ -254,6 +257,7 @@
           opacity: 0.2;
         }
       }
+
       a {
         font-size: 14px;
         color: #FFFFFF;
@@ -268,6 +272,55 @@
   }
 }
 
+
+.inner_top_nav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+
+  &_item {
+    margin-top: 48px;
+
+    &:hover {
+      .inner_top_nav_item_link {
+        border: 1px solid rgba(256, 256, 256, 1);
+      }
+    }
+
+    &:first-of-type {
+      .inner_top_nav_item_link {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+
+    &:last-of-type {
+      .inner_top_nav_item_link  {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    &_link {
+      color: rgba(256, 256, 256, 0.5);
+      text-decoration: none;
+      display: inline-block;
+      padding: 17px 30px;
+      border: 1px solid rgba(256, 256, 256, 0.2);
+      height: 100%;
+      box-sizing: border-box;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &--active {
+        color: rgba(256, 256, 256, 1);
+        border: 1px solid rgba(256, 256, 256, 1);
+      }
+    }
+  }
+}
+
 .inner_main-title {
   font-size: 36px;
   margin-top: 15px;
@@ -276,7 +329,26 @@
 
 section:last-of-type {
   padding-bottom: 100px;
+
   @media screen and (max-width: 981px) {
     padding-bottom: 50px;
+  }
+}
+
+.mark-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  &_item {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      position: absolute;
+      content: "\2022";
+      color: #3980D9;
+      width: 5px;
+      height: 100%;
+      left: 5px;
+    }
   }
 }

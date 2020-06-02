@@ -4,24 +4,42 @@
         justify-content: space-between;
     }
 
-    &_content {
-        max-width: 740px;
-        overflow-y: auto;
+    &_content-wrap {
         position: relative;
-        max-height: 100vh;
+
         &::after {
             position: absolute;
             content: "";
             bottom: 0;
             left: 0;
             right: 0;
-            height: 25px;
+            height: 80px;
             background: linear-gradient(to bottom, transparent, #ffffff);
         }
     }
 
+    &_content {
+        max-width: 755px;
+        overflow-y: auto;
+        position: relative;
+        max-height: 100vh;
+    }
+
+    &_subtitle {
+        font-weight: bold;
+        font-size: 36px;
+        margin-bottom: 25px;
+        color: #3980D9;
+    }
+
+    &_desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
     &_date {
         padding-left: 90px;
+
         &_link {
             display: block;
             text-decoration: none;
@@ -35,6 +53,7 @@
                 opacity: 1;
                 font-weight: bold;
                 font-size: 24px;
+
                 &::before {
                     position: absolute;
                     content: "";
@@ -46,6 +65,232 @@
                     transform: translateY(-50%);
                 }
             }
+        }
+    }
+}
+
+.about-leadership {
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        -webkit-box-pack: center;
+        justify-items: center;
+        padding-top: 40px;
+
+        .leadership {
+            &_item {
+                max-width: 410px;
+                padding: 0 15px;
+
+                &:nth-of-type(2n) {
+                    margin-top: 135px;
+                    margin-right: 0;
+                }
+
+                &:nth-of-type(2n+1) {
+                    margin-top: -40px;
+                }
+            }
+
+            &_ava {
+                margin-bottom: 35px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &_name {
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            &_position {
+                font-weight: bold;
+                font-size: 18px;
+                color: #3980D9;
+                margin-bottom: 25px;
+            }
+
+            &_contact {
+                a {
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: #C4C4C4;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-vacancy {
+    &_wrapper {
+        display: flex;
+    }
+
+    &_nav {
+        margin-right: 90px;
+
+        &_desc {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 60px;
+            line-height: 1.6;
+
+            a {
+                text-decoration: none;
+                color: #000000;
+
+                &:hover {
+                    color: #3980D9;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        &_item {
+            border: 1px solid #e5e5e5;
+            border-bottom: none;
+
+            &--active {
+                background-color: #3980D9;
+                border: 1px solid #3980D9;
+                border-bottom: none;
+
+                a {
+                    color: #ffffff;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(57, 129, 217, 0.507);
+                border: 1px solid #3980D9;
+                position: relative;
+                border-bottom: none;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    height: 1px;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    background-color: #3980D9;
+                }
+            }
+
+            &.about-vacancy_nav_item--nobord {
+                border: none;
+            }
+
+            &:last-of-type {
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            &_link {
+                text-decoration: none;
+                color: #000000;
+                font-weight: bold;
+                font-size: 16px;
+                padding: 20px;
+                display: block;
+                transition: .2s;
+            }
+        }
+    }
+
+    &_content {
+        max-width: 880px;
+        font-size: 14px;
+        line-height: 1.6;
+
+        .about-vacancy {
+            &_desc {
+                margin-bottom: 50px;
+            }
+
+            &_pay {
+                text-align: right;
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 30px;
+                color: #3980D9;
+            }
+
+            &_subtitile {
+                font-weight: bold;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            &_item-list {
+                margin-bottom: 5px;
+
+                &:last-of-type {
+                    margin-bottom: 25px;
+                }
+            }
+
+            &_content_contact {
+                font-size: 14px;
+                text-decoration: none;
+                color: #000000;
+
+                &:hover {
+                    color: #3980D9;
+                }
+            }
+        }
+    }
+}
+
+.about-certificate {
+    &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 45px;
+    }
+
+    &_desc {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 50px;
+        max-width: 550px;
+        line-height: 1.6;
+    }
+
+    &_item {
+        text-decoration: none;
+        max-width: 245px;
+        img {
+            margin-bottom: 20px;
+        }
+
+        &_title {
+            font-weight: bold;
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        &_size {
+            font-size: 12px;
+            color: #B7B7B7;
         }
     }
 }
