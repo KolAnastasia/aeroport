@@ -7,6 +7,13 @@
     font-size: 14px;
     padding: 17px 20px;
   }
+
+  .about-news_wrapper {
+    .about-news_item--bottom {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -417,5 +424,11 @@
 
   .main_news_item {
     margin-right: 30px;
+  }
+
+  .about-news {
+    &_wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
   }
 }

@@ -164,27 +164,6 @@
     &_right {
         width: 33%;
 
-        &_buy-ticket {
-            display: block;
-            padding: 20px;
-            background-color: #3980D9;
-            font-style: normal;
-            border: 2px solid transparent;
-            font-weight: bold;
-            font-size: 14px;
-            color: #fff;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 0.05em;
-            max-width: 245px;
-            text-align: center;
-            transition: .2s ease-in-out;
-            &:hover {
-                background-color: #256AC1;
-                transition: .2s ease-in-out;
-            }
-        }
-
         &_schedule {
             display: inline-block;
             width: 245px;
