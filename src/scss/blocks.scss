@@ -190,16 +190,17 @@
   color: #3980D9;
 
   svg {
-      margin-left: 30px;
-      stroke: #3980D9;
+    margin-left: 30px;
+    stroke: #3980D9;
   }
 
   &:hover {
-      background-color: #3980D9;
-      color: #fff;
-      svg {
-          stroke: #ffffff;
-      }
+    background-color: #3980D9;
+    color: #fff;
+
+    svg {
+      stroke: #ffffff;
+    }
   }
 }
 
@@ -399,4 +400,73 @@ section:last-of-type {
       left: 5px;
     }
   }
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
+.content-slider {
+  margin-bottom: 60px !important;
+
+  .slick-dots {
+    text-align: left;
+    bottom: -50px;
+
+    li {
+      width: 36px;
+      height: 3px;
+      background: #3980D9;
+      opacity: 0.2;
+
+      &::before {
+        display: none;
+      }
+
+      &.slick-active {
+        opacity: 1;
+      }
+
+      &:first-of-type:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
+.flex-wr {
+  display: flex;
+  line-height: 1.6;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+
+  &_left {
+    width: calc(50% - 40px);
+    margin-right: 75px;
+
+    @media(max-width: 768px) {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_right {
+    width: calc(50% - 40px);
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.text--gray {
+  font-size: 14px;
+  color: #ABABAB;
+}
+
+.text--blue {
+  font-weight: bold;
+  font-size: 14px;
+  color: #3980D9;
 }

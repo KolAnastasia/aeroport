@@ -47,5 +47,57 @@ $(document).ready(function () {
 
   $('.fancybox-img').fancybox();
   
+  $('.content-slider').slick ({
+    autoplay: true,
+    dots: true,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
 });
+
+
+// ymaps.ready(function () {
+//   var myMap = new ymaps.Map('map', {
+//           center: [52.698124, 39.524588],
+//           zoom: 9
+//       }, {
+//           searchControlProvider: 'yandex#search'
+//       }),
+
+//       // Создаём макет содержимого.
+//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//       ),
+
+//       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+//           hintContent: 'Собственный значок метки',
+//           balloonContent: 'Это красивая метка'
+//       }, {
+//           // Опции.
+//           // Необходимо указать данный тип макета.
+//           iconLayout: 'default#image',
+//           // Своё изображение иконки метки.
+//           iconImageHref: '../img/map-icon.svg',
+//           // Размеры метки.
+//           iconImageSize: [30, 42],
+//           // Смещение левого верхнего угла иконки относительно
+//           // её "ножки" (точки привязки).
+//           // iconImageOffset: [-5, -38]
+//       });
+//   myMap.geoObjects
+//       .add(myPlacemark)
+// });
 
