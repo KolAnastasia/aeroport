@@ -482,6 +482,18 @@ section.about-news {
                         padding-left: 20px;
                         cursor: pointer;
                         font-size: 12px;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            left: -25px;
+                            top: -2px;
+                            border: 1px solid #DADADA;
+                            box-sizing: border-box;
+                            border-radius: 2px;
+                        }
                     }
 
                     &_agreement-link {
@@ -495,18 +507,6 @@ section.about-news {
             }
         }
     }
-}
-
-.about-news_subscr_agreement_text::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    left: -25px;
-    top: -2px;
-    border: 1px solid #DADADA;
-    box-sizing: border-box;
-    border-radius: 2px;
 }
 
 .about-news_subscr_check:checked+.about-news_subscr_agreement_text::after {

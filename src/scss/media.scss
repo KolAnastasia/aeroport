@@ -304,6 +304,14 @@
       }
     }
   }
+
+  .contacts-tel-serv_table_row div {
+    padding-left: 15px;
+  }
+
+  .contacts-feedback_form_wrap {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -373,6 +381,22 @@
         }
       }
 
+    }
+  }
+
+  .contacts-tel-serv_table {
+    &_row {
+      margin-bottom: 15px;
+      flex-direction: column;
+        div {
+          padding: 5px 10px;
+          border-right: none;
+
+        }
+
+      &-title {
+        display: none;
+      }
     }
   }
 }
