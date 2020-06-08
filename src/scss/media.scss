@@ -312,6 +312,85 @@
   .contacts-feedback_form_wrap {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
+
+  .grid-two-wrap {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+
+    &_left {
+      max-width: 100%;
+    }
+
+    &_desc {
+      font-size: 16px;
+    }
+
+    &_right {
+      max-width: 100%;
+    }
+  }
+
+  .services-disabled-wrap {
+    .grid-two-wrap_left {
+      margin-bottom: 40px;
+    }
+  }
+
+  .services {
+    &-atm {
+      &_item {
+        margin-bottom: 0;
+      }
+
+      p {
+        margin-bottom: 25px;
+
+      }
+    }
+  }
+
+  .inform {
+    &-page-wr {
+      flex-direction: column;
+    }
+
+    &_nav {
+      max-width: 100%;
+      margin-bottom: 40px;
+
+      &_item {
+        line-height: 0;
+        max-height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        &--active {
+          line-height: 1;
+          max-height: 100%;
+          visibility: visible;
+          overflow: visible;
+          max-width: 100%;
+          padding-right: 50px;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background: url(../img/more-icon.svg);
+            width: 20px;
+            height: 4px;
+            right: 15px;
+            top: 5px;
+          }
+        }
+      }      
+    }
+
+    &_subtitle {
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -388,11 +467,12 @@
     &_row {
       margin-bottom: 15px;
       flex-direction: column;
-        div {
-          padding: 5px 10px;
-          border-right: none;
 
-        }
+      div {
+        padding: 5px 10px;
+        border-right: none;
+
+      }
 
       &-title {
         display: none;
@@ -499,5 +579,10 @@
       margin-right: 0;
       width: 210px;
     }
+  }
+
+  .services-card {
+    margin-right: 0;
+    padding: 25px;
   }
 }

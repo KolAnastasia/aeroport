@@ -1,0 +1,46 @@
+.inform {
+    &-page-wr {
+        display: flex;
+    }
+
+    &_nav {
+        width: 100%;
+        max-width: 330px;
+        margin-right: 80px;
+
+        &_item {
+            display: block;
+            max-width: fit-content;
+            text-decoration: none;
+            color: #C4C4C4;
+            margin-bottom: 20px;
+            position: relative;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &--active {
+                color: #000000;
+                font-weight: bold;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background-color: #3980D9;
+                    left: 0;
+                    bottom: -7px;
+                }
+            }
+        }
+    }
+
+
+    &_subtitle {
+        margin: 0 0 50px 0;
+        font-weight: bold;
+        font-size: 24px;
+    }
+}

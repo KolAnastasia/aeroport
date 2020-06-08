@@ -1,0 +1,105 @@
+.services {
+    &_subtitle {
+        margin: 0 0 35px 0;
+        font-size: 14px;
+    }
+
+    &-w-room {
+        &_img {
+            width: 100%;
+            margin-bottom: 45px;
+        }
+
+    }
+
+    &-disabled {
+
+        &_tel-subtitle {
+            text-transform: uppercase;
+            font-size: 14px;
+            margin: 45px 0 35px 0;
+        }
+
+        &_tel-wr {
+            margin-bottom: 15px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &-wrap_tel {
+            display: inline-block;
+            line-height: 1.6;
+            font-weight: bold;
+            color: #000000;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+
+
+    &-card-wrap {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-card {
+        width: 100%;
+        margin-right: 80px;
+        padding: 50px;
+        margin-bottom: 15px;
+        max-width: 410px;
+        background: #F3F6F8;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &_subtitle {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        &_address {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        &_tel {
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            color: #3980D9;
+
+        }
+    }
+
+    &-atm {
+        &_item {
+            margin-bottom: 65px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+         &_logo {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 75px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
