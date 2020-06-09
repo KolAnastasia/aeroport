@@ -101,3 +101,21 @@ $(document).ready(function () {
 //       .add(myPlacemark)
 // });
 
+$('.inform_nav').click(function () {
+  $('.inform_nav').toggleClass('active')
+})
+$('.inform_nav_item').click(function (event) {
+  if(!$(event.currentTarget).parent(".inform_nav").hasClass("active")){
+     event.preventDefault();
+  }
+})
+
+
+// $('.inner_top_nav').click(function () {
+//   $('.inner_top_nav').toggleClass('active')
+// })
+// $('.inner_top_nav_item').click(function (event) {
+//   if(!$(event.currentTarget).parent(".inner_top_nav").hasClass("active")){
+//      event.preventDefault();
+//   }
+// })

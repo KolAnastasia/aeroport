@@ -320,6 +320,9 @@
   }
 }
 
+section.inner-top {
+  padding-bottom: 45px !important;
+}
 
 .inner_top_nav {
   list-style: none;
@@ -529,8 +532,81 @@ section:last-of-type {
   font-weight: bold;
   margin-top: 60px;
   font-size: 18px;
+
   @media screen and (max-width: 768px) {
     padding: 25px 30px;
     font-size: 16px;
+  }
+}
+
+
+ol.num-list {
+  counter-reset: li;
+  padding: 0;
+  padding-left: 25px;
+  list-style: none;
+
+  li.num-list_item {
+    position: relative;
+    margin: 0 0 6px 2em;
+    padding: 4px 8px;
+
+    &::before {
+      content: counter(li);
+      counter-increment: li;
+      position: absolute;
+      top: 3px;
+      left: -2em;
+      width: 2em;
+      padding: 4px 0;
+      color: #3980D9;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+.card {
+  &-wrap {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    width: 100%;
+    margin-right: 80px;
+    padding: 50px;
+    margin-bottom: 15px;
+    max-width: 410px;
+    background: #F3F6F8;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &_subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    &_address {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    &_tel {
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+      color: #3980D9;
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
   }
 }
