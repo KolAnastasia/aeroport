@@ -22,7 +22,6 @@
 }
 
 .header_top_link {
-    font-weight: bold;
     text-decoration: none;
     font-size: 14px;
 }
@@ -54,6 +53,7 @@
     &--active {
         color: #3980D9;
         text-decoration: underline;
+        font-weight: bold;
     }
 }
 
@@ -415,27 +415,6 @@ div.main_online-shelude_table_row_left {
     justify-content: space-between;
 }
 
-.main_online-shelude_more_wrap_btn {
-    display: inline-block;
-    padding: 21px 40px;
-    text-decoration: none;
-    color: #3980D9;
-    background-color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    transition: .2s ease-in-out;
-    border: 1px solid transparent;
-    &:hover {
-        border: 1px solid #fff;
-        background-color: transparent;
-        color: #fff;
-        transition: .2s ease-in-out;
-    }
-}
-
 .main_online-shelude_more_wrap_decore {
     margin-right: 85px;
     border-bottom: 1px solid #ffffff;
@@ -561,6 +540,7 @@ div.main_online-shelude_table_row_left {
 
 .main_news {
     padding-bottom: 95px;
+    padding-top: 30px;
 }
 
 .main_news_wrap {

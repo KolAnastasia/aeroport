@@ -22,6 +22,15 @@ $(document).ready(function () {
     event.stopPropagation();
   });
 
+  $(document).mouseup(function (e) {
+    var div = $(".main_search-wrap");
+    if (!div.is(e.target)
+      && div.hasClass("active")) {
+      div.removeClass;
+    }
+  });
+
+
   $('.page_wrapper').click(function () {
     $('.main_search-wrap').removeClass('active-search')
   })
@@ -46,8 +55,8 @@ $(document).ready(function () {
   })
 
   $('.fancybox-img').fancybox();
-  
-  $('.content-slider').slick ({
+
+  $('.content-slider').slick({
     autoplay: true,
     dots: true,
     slidesToShow: 3,
@@ -68,6 +77,14 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function(){
+  $(".about-history_date").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('.about-history_content').animate({scrollTop: top}, 800);
+  });
+});
 
 // ymaps.ready(function () {
 //   var myMap = new ymaps.Map('map', {
@@ -101,14 +118,16 @@ $(document).ready(function () {
 //       .add(myPlacemark)
 // });
 
-$('.inform_nav').click(function () {
-  $('.inform_nav').toggleClass('active')
-})
-$('.inform_nav_item').click(function (event) {
-  if(!$(event.currentTarget).parent(".inform_nav").hasClass("active")){
-     event.preventDefault();
-  }
-})
+if ($(window).width() < 981) {
+  $('.inform_nav').click(function () {
+    $('.inform_nav').toggleClass('active')
+  })
+  $('.inform_nav_item').click(function (event) {
+    if (!$(event.currentTarget).parent(".inform_nav").hasClass("active")) {
+      event.preventDefault();
+    }
+  })
+};
 
 
 // $('.inner_top_nav').click(function () {

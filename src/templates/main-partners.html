@@ -14,7 +14,7 @@
 <body class="page">
     <div class="window-visible win--vis"></div>
     <div class="main-page-wrap">
-        <div class="main_search-wrap">
+        <div class="main_search-wrap main_search-wrap--blue">
             <form class="main_search-form">
                 <input type="text" class="main_search-input" placeholder="Поиск">
                 <div class="main_search-btn"> <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -37,17 +37,13 @@
                     <rect x="2.00024" y="1" width="23" height="2" transform="rotate(45 2.00024 1)" fill="white" />
                 </svg>
             </div>
-            <nav>
-                <ul class="header_menu-wrap">
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Онлайн-табло рейсов</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Купить билеты</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Услуги</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Сезонное расписание</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Об аэропорте</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Информация</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Контакты</a></li>
-                </ul>
-            </nav>
+            <ul class="header_menu-wrap">
+                <li class="header_menu_item"><a href="#" class="header_menu_link">Об аэропорте</a></li>
+                <li class="header_menu_item"><a href="#" class="header_menu_link">Авиакомпаниям</a></li>
+                <li class="header_menu_item"><a href="#" class="header_menu_link">Грузоотправителям</a></li>
+                <li class="header_menu_item"><a href="#" class="header_menu_link">Рекламодателям</a></li>
+                <li class="header_menu_item"><a href="#" class="header_menu_link">Контакты</a></li>
+            </ul>
             <div class="header_menu_feedback">
                 Обратная связь
             </div>
@@ -91,8 +87,8 @@
                         </div>
                         <div class="header_switch">
                             <a href="#"
-                                class="header_switch_link--active header_switch_link header_top_link">Пассажирам</a>
-                            <a href="#" class="header_top_link header_switch_link">Партнерам</a>
+                                class="header_top_link header_switch_link">Пассажирам</a>
+                            <a href="#" class="header_top_link header_switch_link header_switch_link--active">Партнерам</a>
                         </div>
                     </div>
                     <div class="header_right">
@@ -144,18 +140,140 @@
                                 </svg>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </header>
         </div>
-        <main class="home">
-          <div class="not-f-wr">
-              <img src="../img/404.png" alt="" class="not-f-wr_img">
-              <div class="not-f-wr_content"> К сожалению, страница не найдена</div>
-              <div class="not-f-wr_content_desc"> Вы можете вернуться на Главную </div>
-              <a href="#" class="not-f-wr_content_desc_btn btn--white">на главную</a>
-          </div>
+        <div class="section_wrapper">
+            <main class="home">
+                <section class="main-option">
+                    <div class="main-option_left">
+                        <div class="main-option_slider title-decore">
+                            <div class="main-option_slider_item">
+                                <h1 class="main-option_slider_item_title">Международный аэропорт «Липецк»</h1>
+                                <div class="main-option_slider_item_content"> Мы всегда открыты к сотрудничеству
+                                </div>
+                            </div>
+                            <div class="main-option_slider_item">
+                                <h1 class="main-option_slider_item_title">Международный аэропорт «Липецк» 1</h1>
+                                <div class="main-option_slider_item_content">  Мы всегда открыты к сотрудничеству 1
+                                </div>
+                            </div>
+                            <div class="main-option_slider_item">
+                                <h1 class="main-option_slider_item_title">Международный аэропорт «Липецк»2</h1>
+                                <div class="main-option_slider_item_content">  Мы всегда открыты к сотрудничеству
+                                    2
+                                </div>
+                            </div>
+                            <div class="main-option_slider_item">
+                                <h1 class="main-option_slider_item_title">Международный аэропорт «Липецк»3</h1>
+                                <div class="main-option_slider_item_content">   Мы всегда открыты к сотрудничеству
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-option_right">
+                        <a href="#" class="btn main-option_right_buy-ticket">Купить билет</a>
+                        <div class="main-option_right_schedule"> <a href="#"> Смотреть расписание </a> </div>
+                        <div class="main-option_right_more">
+                            <a href="#" class="main-option_right_more_item how-get">
+                                <svg width="50" height="50" viewbox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle opacity="0.2" cx="25" cy="25" r="24.5" stroke="#F36F76" />
+                                    <path
+                                        d="M25.3333 15C23.124 15.0025 21.0058 15.8814 19.4435 17.4437C17.8813 19.0061 17.0025 21.1244 17 23.334C17 29.5427 24.5498 34.6473 24.8711 34.8615C25.0084 34.9518 25.1691 35 25.3334 35C25.4977 35 25.6584 34.9518 25.7956 34.8615C26.1169 34.6473 33.6667 29.5427 33.6667 23.334C33.6642 21.1244 32.7854 19.0061 31.2231 17.4437C29.6609 15.8814 27.5427 15.0025 25.3333 15Z"
+                                        fill="#F36F76" />
+                                    <circle cx="25.3334" cy="23.3333" r="3.66667" fill="#F4F4F4" />
+                                </svg>
+                            </a>
+                            <a href="#" class="main-option_right_more_item main-option_right_about-airport">
+                                <svg width="50" height="50" viewbox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle opacity="0.2" cx="25" cy="25" r="24.5" stroke="#3980D9" />
+                                    <path
+                                        d="M34.2943 15.6587C33.3797 14.7444 31.8543 14.7871 30.8867 15.7545L27.5749 19.2951L17.0668 16.1496L15.293 17.9234C15.0985 18.1179 15.0987 18.4329 15.293 18.6272L23.8131 23.3165L20.4668 26.947C20.1663 27.2475 19.9345 27.5809 19.7723 27.9196L16.216 26.9991L15.1099 28.1053C14.9634 28.2518 14.9634 28.4896 15.1099 28.6361L19.0238 30.6215L19.3783 30.9758L21.3639 34.8898C21.5104 35.0366 21.7484 35.0368 21.8949 34.8902L23.0009 33.7842L22.0644 30.1654C22.3922 30.0039 22.7147 29.7777 23.0061 29.4864L26.6502 26.1268L31.3726 34.7067C31.5671 34.9012 31.8819 34.9012 32.0765 34.7069L33.8501 32.9331L30.6838 22.3538L34.1986 19.0661C35.1656 18.0986 35.2085 16.5729 34.2943 15.6587Z"
+                                        fill="#3980D9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="main-part_category">
+                    <div class="main-part_category_wr">
+                        <a href="#" class="main-part_category_item main-part_category_item--air">
+                            <div class="main-part_category_item_icon">
+                                <svg width="129" height="130" viewBox="0 0 129 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M64.302 3.29751C61.2502 3.29739 58.4627 5.78476 56.2392 10.4921C54.7105 13.7296 53.6426 17.6611 53.6426 20.0528L53.6426 39.2608L17.0634 65.909L17.0634 81.997L53.6426 66.0081L53.6426 82.8865L42.3661 95.5659L42.3661 107.053L61.6371 100.326L61.6371 107.609L66.9667 107.609L66.9667 100.336L86.2377 107.05L86.2376 95.566L74.9612 82.8865V65.7248L111.533 81.7105L111.533 65.6226L74.961 38.9795L74.9609 20.0525C74.961 17.6608 73.8932 13.7293 72.3643 10.4916C70.1418 5.78526 67.3537 3.29726 64.302 3.29751ZM22.3932 73.8509L22.3932 68.6202L53.6427 45.8546L53.6427 60.1912L22.3932 73.8509ZM106.204 68.3339L106.204 73.5645L74.9614 59.9084L74.9614 45.5738L106.204 68.3339ZM67.5454 12.768C68.8343 15.4969 69.6317 18.6743 69.6317 20.0528L69.632 84.9135L80.9083 97.593L80.9083 99.5494L66.9672 94.6921L66.9672 88.1398L61.6376 88.1398L61.6374 94.681L47.696 99.5474L47.696 97.5932L58.9725 84.9138L58.9722 20.053C58.9722 18.6742 59.77 15.4971 61.0586 12.768C62.5215 9.67014 63.8983 8.62706 64.302 8.62706C64.7054 8.62718 66.0822 9.66975 67.5454 12.768Z" fill="white"/>
+                                    </svg>
+                                    
+                            </div>
+                            <div class="main-part_category_item_title">
+                                Авиакомпаниям
+                            </div>
+                        </a>
+                        <a href="#" class="main-part_category_item main-part_category_item--cargo">
+                            <div class="main-part_category_item_icon">
+                                <svg width="90" height="90" viewBox="0 0 90 90" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M87.8674 15.3609C87.7587 15.3245 45.2727 1.13625 45.2727 1.13625C44.8921 0.954583 44.5296 0.954583 44.1489 1.13625L2.11607 14.9975C1.06479 15.4335 0.811035 16.3419 0.811035 16.8687V73.7853C0.811035 74.73 1.37292 75.4748 2.11607 75.6565L43.6233 88.9546C44.2577 89.1908 44.9464 89.2816 45.8165 88.9546L87.3055 75.6565C88.0487 75.275 88.6106 74.5301 88.6106 73.7853V16.8687C88.6106 16.3055 88.4293 15.7424 87.8674 15.3609ZM44.7108 5.06028L80.7623 16.6689L67.1501 21.0471L31.6243 9.32948L44.7108 5.06028ZM42.8439 84.6309L4.54487 72.4591V19.5211L42.8439 31.8018V84.6309ZM44.7108 28.2775L8.65934 16.8687L25.6429 11.3097L61.0418 23.0273L44.7108 28.2775ZM46.5777 84.6309V31.6565L65.6275 25.6069V31.4748L69.3614 29.8761V24.4261L84.8586 19.5211V72.2775H84.8767L46.5777 84.6309Z"
+                                        fill="white" stroke="white" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div class="main-part_category_item_title">
+                                Грузоотправителям
+                            </div>
+                        </a>
+                        <a href="#" class="main-part_category_item main-part_category_item--ad">
+                            <div class="main-part_category_item_icon">
+                                <svg width="99" height="81" viewBox="0 0 99 81" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M86.1924 20.7032V0L42.5666 15.8548H14.5455L0 20.7032V49.0912L14.5455 53.9396H19.0425V81H39.0872V53.9396H42.571L86.1924 69.6587V49.0912L98.2192 45.0822V24.7122L86.1924 20.7032ZM12.0268 46.7614L6.01342 44.7569V25.0375L12.0268 23.033V46.7614ZM33.0738 74.9866H25.0559V53.9396H33.0738V74.9866ZM40.0895 47.9262H18.0403V21.868H40.0895V47.9262ZM80.179 61.0998L46.1029 48.8204V20.9678L80.179 8.58356V61.0998ZM92.2058 40.748L86.1924 42.7524V27.042L92.2058 29.0464V40.748Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="main-part_category_item_title">
+                                Рекламодателям
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="main_news">
+                    <h2 class="main_news-title section_subtitle title-decore">Новости</h2>
+                    <div class="main_news_wrap">
+                        <div class="main_news_item">
+                            <div class="main_news_item_date">
+                                31 декабря 2019
+                            </div>
+                            <a href="#" class="main_news_item_title">
+                                Липчан будут бесплатно доставлять до Липецкого аэропорта
+                            </a>
+                        </div>
+                        <div class="main_news_item">
+                            <div class="main_news_item_date">
+                                27 декабря 2019
+                            </div>
+                            <a href="#" class="main_news_item_title">
+                                В Липецком аэропорту наградили лучших сотрудников аварийно-спасательной службы
+                            </a>
+                        </div>
+                        <div class="main_news_item">
+                            <div class="main_news_item_date">
+                                26 декабря 2019
+                            </div>
+                            <a href="#" class="main_news_item_title">
+                                Воспитанники подшефной аэропорту школы получили новогодние подарки
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="main_news_more-news">Все новости</a>
+                </section>
+        </div>
         </main>
+
         <footer class="footer">
             <div class="section_wrapper">
                 <div class="footer_wrap">
@@ -222,6 +340,7 @@
                 </div>
             </div>
         </footer>
+    </div>
     </div>
     <script src="../bundle.js"></script>
 </body>
