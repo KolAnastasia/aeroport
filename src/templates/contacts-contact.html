@@ -8,7 +8,8 @@
 
     <title>Title</title>
     <link media="none" onload="if(media!='all') media='all'" rel="stylesheet" type="text/css" href="../css/main.css">
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=570c6aab-43fd-423a-ae71-ab4d76b9cbcb&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 
 <body class="page">
@@ -243,9 +244,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contacts_map-wrap">
-                        <script type="text/javascript" charset="utf-8" async
-                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99cba5438bfad9e0d88fc0141774243dcdd18b7d78865105bb8890a27a16368b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <div class="contacts_map-wrap" id="map" style="width: 100%; height: 400px">
+                        
                     </div>
                 </div>
             </section>
