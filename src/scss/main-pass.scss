@@ -28,6 +28,9 @@
 
 .header_number_link {
     color: #000000;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .header_number {
@@ -37,6 +40,9 @@
 .header_switch_link {
     display: inline-block;
     color: #DADADA;
+    &:hover {
+        text-decoration: underline;
+    }
     &:first-of-type {
         margin-right: 20px;
         position: relative;

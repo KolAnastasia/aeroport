@@ -1,3 +1,4 @@
+//настройки слайдеров на главной
 $(document).ready(function () {
   $('.main-option_slider').slick({
     autoplay: true,
@@ -17,44 +18,43 @@ $(document).ready(function () {
 
   })
 
+
+  // вызов строки поиска 
   $('.header_search').click(function (event) {
     $('.main_search-wrap').addClass('active-search');
     event.stopPropagation();
   });
 
-  $(document).mouseup(function (e) {
-    var div = $(".main_search-wrap");
-    if (!div.is(e.target)
-      && div.hasClass("active")) {
-      div.removeClass;
+  $(document).click(function (e) {
+    if ($(e.target).closest('.main_search-wrap').length) {
+      return;
     }
+    $('.main_search-wrap').removeClass('active-search');
   });
 
 
-  $('.page_wrapper').click(function () {
-    $('.main_search-wrap').removeClass('active-search')
-  })
-
+  //переключатель расписания полетов на главной
   $('.main_online-shelude_top_btn').click(function (event) {
-    $('.main_online-shelude_top_btn').toggleClass('active-btn')
     $('.main_online-shelude_table').removeClass('active')
+    $('.main_online-shelude_top_btn').removeClass('active-btn')
     var num = $(this).attr('data-n');
     $('#main_online-shelude_table' + num).addClass('active')
+    $('#main_online-shelude_top_btn' + num).addClass('active-btn')
   });
 
+  //основное меню
   $('.header_menu').click(function () {
-    $('.header_menu-r').toggleClass('active')
+    $('.header_menu-r').addClass('active');
+    $('.window-visible').addClass('active');
+    $('.page').addClass('active');
   })
 
   $('.close-menu').click(function () {
-    $('.header_menu-r').removeClass('active')
-  })
 
-  $('#inner_top_calendar').datepicker({
-    minDate: new Date()
+    $('.window-visible').removeClass('active');
+    $('.header_menu-r').removeClass('active');
+    $('.page').removeClass('active');
   })
-
-  $('.fancybox-img').fancybox();
 
   $('.content-slider').slick({
     autoplay: true,
@@ -77,32 +77,9 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function(){
-  $(".about-history_date").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('.about-history_content').animate({scrollTop: top}, 800);
-  });
-});
 
 
-
-ymaps.ready(init);
-function init(){ 
-    var myMap = new ymaps.Map("map", {
-        center: [52.698286, 39.524596
-        ],
-        zoom: 14
-    });
-}
-
-// var myPlacemark = new ymaps.Placemark([55.76, 37.56], {}, {
-//   iconLayout: 'default#image',
-//   iconImageHref: '/img/',
-//   iconImageSize: [30, 42],
-//   iconImageOffset: [-3, -42]
-// });
+//всплывающее меню на внутренних страницах
 
 if ($(window).width() < 981) {
   $('.inform_nav').click(function () {
@@ -115,12 +92,77 @@ if ($(window).width() < 981) {
   })
 };
 
+//якоря на странице истории
 
-// $('.inner_top_nav').click(function () {
-//   $('.inner_top_nav').toggleClass('active')
-// })
-// $('.inner_top_nav_item').click(function (event) {
-//   if(!$(event.currentTarget).parent(".inner_top_nav").hasClass("active")){
-//      event.preventDefault();
-//   }
-// })
+// $(".about-history_date").on("click", "a", function (event) {
+  
+//   event.preventDefault();
+// jQuery(window).scroll(function () {
+//   var $article = $('.about-history_subtitle');
+//   $article.each(function (i, el) {
+//     var top = $(el).offset().top - 100;
+//     var bottom = top + $(el).height();
+//     var scroll = $(window).scrollTop();
+//     var id = $(el).attr('id');
+//     if (scroll > top && scroll < bottom) {
+//       $('a.about-history_date_link--active').removeClass('about-history_date_link--active');
+//       $('a[href="#' + id + '"]').addClass('about-history_date_link--active');
+
+//     }
+//   })
+
+//   // исключаем стандартную реакцию браузера
+
+//    //получем идентификатор блока из атрибута href
+//    var id = $(this).attr('href'),
+ 
+//      // находим высоту, на которой расположен блок
+//      top = $(id).offset().top;
+ 
+//    // анимируем переход к блоку, время: 800 мс
+//    $('body,html').animate({ scrollTop: top }, 800);
+//  });
+// });
+
+ 
+
+  //галерея
+  $('.fancybox-img').fancybox();
+
+  //календарь на сезонном расписании
+  $('#inner_top_calendar').datepicker({
+    minDate: new Date()
+  })
+
+
+
+//настройка карты 
+
+ymaps.ready(init);
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [52.698286, 39.524596],
+    zoom: 13,
+  }),
+
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #3980D9; font-weight: bold; position: absolute; right: -100px; max-width: 100px; top: -15px;">$[properties.iconContent]</div>'
+    ),
+
+    myPlacemarkWithContent = new ymaps.Placemark([52.698286, 39.524596], {
+      hintContent: 'Собственный значок метки с контентом',
+      balloonContent: 'А эта — новогодняя',
+      iconContent: 'Липецк, аэропорт, ОГКП'
+
+    }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: '../img/map-icon.png',
+      iconImageSize: [32, 38],
+      iconImageOffset: [-20, -15],
+      iconContentOffset: [15, 15],
+      iconContentLayout: MyIconContentLayout
+    });
+
+  myMap.geoObjects
+    .add(myPlacemarkWithContent);
+}
