@@ -94,40 +94,41 @@ if ($(window).width() < 981) {
 
 //якоря на странице истории
 
-// $(".about-history_date").on("click", "a", function (event) {
+$(".about-history_content").scroll(function(){
+  var historyItems = $('.about-history_content_item');
+  historyItems.each(function(i,el){
+    var top  = $(el).offset().top-100     ;  
+    var bottom = top +$(el).height();
+    //
+    var scroll = $(window).scrollTop();
+    var id = $(el).attr('id');
+    if( scroll > top && scroll < bottom){
+        $('.about-history_date_link--active').removeClass('about-history_date_link--active');
+        $('.about-history_date_link[href="#'+id+'"]').addClass('about-history_date_link--active');
+    }
+  })
+});
+
+$("nav").on("click","a", function (event) {
+ // исключаем стандартную реакцию браузера
+ event.preventDefault();
+
+ // получем идентификатор блока из атрибута href
+ var id  = $(this).attr('href'),
+
+ // находим высоту, на которой расположен блок
+     top = $(id).offset().top;
   
-//   event.preventDefault();
-// jQuery(window).scroll(function () {
-//   var $article = $('.about-history_subtitle');
-//   $article.each(function (i, el) {
-//     var top = $(el).offset().top - 100;
-//     var bottom = top + $(el).height();
-//     var scroll = $(window).scrollTop();
-//     var id = $(el).attr('id');
-//     if (scroll > top && scroll < bottom) {
-//       $('a.about-history_date_link--active').removeClass('about-history_date_link--active');
-//       $('a[href="#' + id + '"]').addClass('about-history_date_link--active');
-
-//     }
-//   })
-
-//   // исключаем стандартную реакцию браузера
-
-//    //получем идентификатор блока из атрибута href
-//    var id = $(this).attr('href'),
- 
-//      // находим высоту, на которой расположен блок
-//      top = $(id).offset().top;
- 
-//    // анимируем переход к блоку, время: 800 мс
-//    $('body,html').animate({ scrollTop: top }, 800);
-//  });
-// });
+ // анимируем переход к блоку, время: 800 мс
+ $('body,html').animate({scrollTop: top}, 800);
+});
 
  
-
+if(fancybox){
   //галерея
   $('.fancybox-img').fancybox();
+}
+  
 
   //календарь на сезонном расписании
   $('#inner_top_calendar').datepicker({
