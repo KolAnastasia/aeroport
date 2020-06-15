@@ -2,6 +2,7 @@
     &_wrap {
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
     &_content-wrap {
@@ -20,9 +21,7 @@
 
     &_content {
         max-width: 755px;
-        overflow-y: auto;
         position: relative;
-        max-height: 100vh;
         padding-right: 20px;
 
         &_item {
@@ -48,7 +47,10 @@
     }
 
     &_date {
-        padding-left: 90px;
+        padding-left: 90px;      
+        position: sticky;
+        top: 0;
+        height: fit-content;
 
         &_link {
             display: block;

@@ -140,10 +140,25 @@ if ($(window).width() < 981) {
 }
 //якоря на странице истории
 
-// $(".about-history_content").scroll(function () {
+$(window).scroll(function () {
+  var historyItems = $('.about-history_content_item');
+  historyItems.each(function (i, el) {
+    var top = $(el).offset().top ;
+    // + $('.about-history_content').position().top;
+    var bottom = top + $(el).height();
+    //
+    var scroll = $(window).scrollTop();
+    var id = $(el).attr('id');
+    if (scroll > top && scroll < bottom) {
+      $('.about-history_date_link--active').removeClass('about-history_date_link--active');
+      $('.about-history_date_link[href="#' + id + '"]').addClass('about-history_date_link--active');
+    }
+  })
+});
+// $(window).scroll(function () {
 //   var historyItems = $('.about-history_content_item');
 //   historyItems.each(function (i, el) {
-//     var top = $(el).offset().top - 100;
+//     var top = $(el).offset().top ;
 //     // + $('.about-history_content').position().top;
 //     var bottom = top + $(el).height();
 //     //
@@ -156,19 +171,19 @@ if ($(window).width() < 981) {
 //   })
 // });
 
-// $("nav").on("click", "a", function (event) {
-//   // исключаем стандартную реакцию браузера
-//   event.preventDefault();
+$(".about-history_date").on("click", ".about-history_date_link", function (event) {
+  // исключаем стандартную реакцию браузера
+  event.preventDefault();
 
-//   // получем идентификатор блока из атрибута href
-//   var id = $(this).attr('href'),
+  // получем идентификатор блока из атрибута href
+  var id = $(this).attr('href');
 
-//     // находим высоту, на которой расположен блок
-//     top = $(id).offset().top;
-
-//   // анимируем переход к блоку, время: 800 мс
-//   $('body,html').animate({ scrollTop: top }, 800);
-// });
+    // находим высоту, на которой расположен блок
+  let top = $(id).offset().top;
+  
+  // анимируем переход к блоку, время: 800 мс
+  $("body,html").animate({ scrollTop: top }, 800);
+});
 
 
 //галерея
