@@ -124,11 +124,11 @@ $("nav").on("click","a", function (event) {
 });
 
  
-if(fancybox){
   //галерея
-  $('.fancybox-img').fancybox();
+if ($(".fancybox-img")){
+  $.fancybox.open($('.fancybox-img'));
 }
-  
+
 
   //календарь на сезонном расписании
   $('#inner_top_calendar').datepicker({

@@ -107,11 +107,12 @@ module.exports = {
         ],
       },
     ],
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin(),
+  }, 
+  plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     })
-]
+  ],
 };

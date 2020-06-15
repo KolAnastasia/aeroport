@@ -630,6 +630,11 @@
       }
     }
   }
+
+  .close-menu {
+    right: 27px;
+    top: 17px;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -806,7 +811,7 @@
 
     .header_menu-wrap {
       .header_menu_item {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         .header_menu_link {
           font-size: 18px;
