@@ -1,13 +1,8 @@
 .contacts {
-    &_wrapper {
-        max-width: 1150px;
-        margin: 0 auto;
-        padding-left: 30px;
-    }
-
     &_top {
         display: flex;
         flex-wrap: wrap;
+        padding-left: 45px;
 
         &_item {
             max-width: 250px;

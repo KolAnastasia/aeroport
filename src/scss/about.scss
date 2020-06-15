@@ -24,6 +24,14 @@
         position: relative;
         max-height: 100vh;
         padding-right: 20px;
+
+        &_item {
+            padding-top: 50px;
+
+            &:first-of-type {
+                padding-top: 0;
+            }
+        }
     }
 
     &_subtitle {
@@ -31,6 +39,7 @@
         font-size: 36px;
         margin-bottom: 25px;
         color: #3980D9;
+        margin-top: 0;
     }
 
     &_desc {
@@ -178,20 +187,22 @@
             }
 
             &:hover {
-                background-color: rgba(57, 129, 217, 0.507);
-                border: 1px solid #3980D9;
-                position: relative;
-                border-bottom: none;
+                @media (min-width: 981px) {
+                    background-color: rgba(57, 129, 217, 0.507);
+                    border: 1px solid #3980D9;
+                    position: relative;
+                    border-bottom: none;
 
-                &::after {
-                    position: absolute;
-                    content: "";
-                    bottom: 0;
-                    height: 1px;
-                    width: 100%;
-                    left: 0;
-                    right: 0;
-                    background-color: #3980D9;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        height: 1px;
+                        width: 100%;
+                        left: 0;
+                        right: 0;
+                        background-color: #3980D9;
+                    }
                 }
             }
 

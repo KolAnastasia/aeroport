@@ -1,3 +1,12 @@
+import 'jquery'
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+import 'slick-carousel'
+import './script.js';
+import '../../node_modules/air-datepicker/dist/js/datepicker';
+
+const fancybox = require("@fancyapps/fancybox");
+
 //настройки слайдеров на главной
 $(document).ready(function () {
   $('.main-option_slider').slick({
@@ -82,59 +91,107 @@ $(document).ready(function () {
 //всплывающее меню на внутренних страницах
 
 if ($(window).width() < 981) {
-  $('.inform_nav').click(function () {
-    $('.inform_nav').toggleClass('active')
+  $('.inner_top_nav').click(function () {
+    $('.inner_top_nav').toggleClass('active')
   })
-  $('.inform_nav_item').click(function (event) {
-    if (!$(event.currentTarget).parent(".inform_nav").hasClass("active")) {
+  $('.inner_top_nav_item_link').click(function (event) {
+    if (!$(event.currentTarget).$(".inner_top_nav").hasClass("active")) {
       event.preventDefault();
     }
   })
-};
 
+  $(document).ready(function () {
+    let nav = $(".inner_top_nav_item_link");
+    let index = 0;
+    let topPos = 15;
+    for (let i = 0; i < nav.length; i++) {
+      if ($(nav[i]).hasClass('inner_top_nav_item_link--active')) {
+        index = i;
+      }
+    }
+    let buf = nav[0];
+    let active = nav[index];
+
+
+    nav[0] = active;
+    nav[index] = buf;
+
+    $('.inner_top_nav').html(nav)
+
+    for (let a = 1; a < nav.length; a++) {
+      topPos = topPos + 40;
+      $(nav[a]).css({ "top": topPos });
+    }
+
+
+
+    //Список вакансий
+    $('.about-vacancy_nav_nav').click(function () {
+      $('.about-vacancy_nav_nav').toggleClass('active')
+    })
+    $('.about-vacancy_nav_item_link').click(function (event) {
+      if (!$(event.currentTarget).parent(".about-vacancy_nav_nav").hasClass("active")) {
+        event.preventDefault();
+      }
+    })
+  });
+
+
+}
 //якоря на странице истории
 
-$(".about-history_content").scroll(function(){
-  var historyItems = $('.about-history_content_item');
-  historyItems.each(function(i,el){
-    var top  = $(el).offset().top-100     ;  
-    var bottom = top +$(el).height();
-    //
-    var scroll = $(window).scrollTop();
-    var id = $(el).attr('id');
-    if( scroll > top && scroll < bottom){
-        $('.about-history_date_link--active').removeClass('about-history_date_link--active');
-        $('.about-history_date_link[href="#'+id+'"]').addClass('about-history_date_link--active');
-    }
-  })
-});
+// $(".about-history_content").scroll(function () {
+//   var historyItems = $('.about-history_content_item');
+//   historyItems.each(function (i, el) {
+//     var top = $(el).offset().top - 100;
+//     // + $('.about-history_content').position().top;
+//     var bottom = top + $(el).height();
+//     //
+//     var scroll = $(window).scrollTop();
+//     var id = $(el).attr('id');
+//     if (scroll > top && scroll < bottom) {
+//       $('.about-history_date_link--active').removeClass('about-history_date_link--active');
+//       $('.about-history_date_link[href="#' + id + '"]').addClass('about-history_date_link--active');
+//     }
+//   })
+// });
 
-$("nav").on("click","a", function (event) {
- // исключаем стандартную реакцию браузера
- event.preventDefault();
+// $("nav").on("click", "a", function (event) {
+//   // исключаем стандартную реакцию браузера
+//   event.preventDefault();
 
- // получем идентификатор блока из атрибута href
- var id  = $(this).attr('href'),
+//   // получем идентификатор блока из атрибута href
+//   var id = $(this).attr('href'),
 
- // находим высоту, на которой расположен блок
-     top = $(id).offset().top;
-  
- // анимируем переход к блоку, время: 800 мс
- $('body,html').animate({scrollTop: top}, 800);
-});
+//     // находим высоту, на которой расположен блок
+//     top = $(id).offset().top;
 
- 
-if(fancybox){
-  //галерея
+//   // анимируем переход к блоку, время: 800 мс
+//   $('body,html').animate({ scrollTop: top }, 800);
+// });
+
+
+//галерея
+if ($('a').is(".fancybox-img")) {
   $('.fancybox-img').fancybox();
 }
-  
 
-  //календарь на сезонном расписании
+
+//календарь на сезонном расписании
+if ($('input').is("#inner_top_calendar")) {
   $('#inner_top_calendar').datepicker({
     minDate: new Date()
   })
+}
 
+//вкладки сезонного расписания
+$('.seasonal_sch-btn').click(function (event) {
+  var num = $(this).attr('data-n');
+  $('.seasonal_schedule_table-wrap').removeClass('active')
+  $('.seasonal_sch-btn').removeClass('active-btn')
+  $('#seasonal_schedule_table-wr' + num).addClass('active')
+  $('.seasonal_sch-btn' + num).addClass('active-btn')
+});
 
 
 //настройка карты 
@@ -151,8 +208,6 @@ function init() {
     ),
 
     myPlacemarkWithContent = new ymaps.Placemark([52.698286, 39.524596], {
-      hintContent: 'Собственный значок метки с контентом',
-      balloonContent: 'А эта — новогодняя',
       iconContent: 'Липецк, аэропорт, ОГКП'
 
     }, {

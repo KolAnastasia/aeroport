@@ -29,7 +29,6 @@ body {
 @import 'slick-carousel/slick/slick-theme.scss';
 @import 'slick-carousel/slick/slick.scss';
 @import '../../node_modules/air-datepicker/dist/css/datepicker.css';
-
-@import '~fancybox/dist/scss/jquery.fancybox.scss';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 .fancybox-overlay {background-color: rgba(0, 0, 0, .7) !important}
