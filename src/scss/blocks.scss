@@ -373,6 +373,10 @@
   }
 }
 
+.footer_development-link {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .header_language.header_right_child-left a {
   font-size: 16px;
   color: #000000;
@@ -482,6 +486,7 @@ section.inner-top {
       &--active {
         color: rgba(256, 256, 256, 1);
         border: 1px solid rgba(256, 256, 256, 1);
+        font-weight: bold;
       }
     }
   }
@@ -548,6 +553,12 @@ section:last-of-type {
 
       &:first-of-type:last-of-type {
         display: none;
+      }
+
+      button {
+        &::before {
+          display: none;
+        }
       }
     }
   }

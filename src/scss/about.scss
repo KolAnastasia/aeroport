@@ -3,6 +3,8 @@
         display: flex;
         justify-content: space-between;
         position: relative;
+        overflow: auto;
+        position: relative;
     }
 
     &_content-wrap {
@@ -21,8 +23,10 @@
 
     &_content {
         max-width: 755px;
-        position: relative;
         padding-right: 20px;
+        overflow: auto;
+        min-height: 765px;
+        padding-bottom: 100%;
 
         &_item {
             padding-top: 50px;
@@ -46,11 +50,16 @@
         line-height: 1.6;
     }
 
-    &_date {
-        padding-left: 90px;      
+    &_nav-wr {
         position: sticky;
         top: 0;
-        height: fit-content;
+        height: auto;
+        align-self: flex-start;
+    }
+
+    &_date {
+        padding-left: 90px;
+        position: relative;
 
         &_link {
             display: block;
@@ -60,6 +69,18 @@
             opacity: 0.2;
             margin-bottom: 35px;
             position: relative;
+            z-index: 15;
+            &::before {
+                position: absolute;
+                content: "";
+                right: 0;
+                width: 0;
+                height: 0;
+                background: #3980D9;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -2;
+            }
 
             &--active {
                 opacity: 1;
@@ -67,14 +88,9 @@
                 font-size: 24px;
 
                 &::before {
-                    position: absolute;
-                    content: "";
-                    right: 0;
                     width: 145px;
                     height: 2px;
-                    background: #3980D9;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    transition: .3s;
                 }
             }
         }

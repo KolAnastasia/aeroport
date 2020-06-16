@@ -28,6 +28,7 @@
 
 .header_number_link {
     color: #000000;
+    font-weight: bold;
     &:hover {
         text-decoration: underline;
     }
@@ -50,9 +51,9 @@
             position: absolute;
             content: "/";
             color: #C4C4C4;
-            font-weight: bold;
             font-size: 18px;
             bottom: 0;
+            font-weight: 300;
             right: -15px;
         }
     }
@@ -130,6 +131,12 @@
         width: 36px;
         background: #3980D9;
         opacity: 0.2;
+        
+      button {
+        &::before {
+          display: none;
+        }
+      }
 
     }
 
@@ -161,7 +168,7 @@
             font-size: 17rem;
             z-index: 0;
             color: #3980D9;
-            opacity: 0.05;
+            opacity: 0.2;
             font-weight: bold;
         }
     }
@@ -182,6 +189,7 @@
                 color: #000;
                 text-decoration: none;
                 transition: .1s ease-in-out;
+                font-size: 14px;
 
                 &:hover {
                     border-bottom: 1px dashed #3980D9;
@@ -479,7 +487,7 @@ div.main_online-shelude_table_row_left {
 }
 
 .online-shelude_slider_item_title {
-    font-weight: bold;
+    font-weight: 800;
     position: relative;
     font-size: 36px;
     line-height: 1.2;
@@ -513,6 +521,12 @@ div.main_online-shelude_table_row_left {
             width: 36px;
             background: #ffffff;
             opacity: 0.2;
+            
+      button {
+        &::before {
+          display: none;
+        }
+      }
         }
 
         li.slick-active {

@@ -139,51 +139,48 @@ if ($(window).width() < 981) {
 
 }
 //якоря на странице истории
+$(document).ready(function () {
+  var height = $('.about-history_nav-wr').height();
+  $('.about-history_content').css("height", height);
+  var anchor = $('.scroll-anchor').offset().top + 150;
+  $('.about-history_content').scroll(function () {
+    var historyItems = $('.about-history_content_item');
+    historyItems.each(function (i, el) {
 
-$(window).scroll(function () {
-  var historyItems = $('.about-history_content_item');
-  historyItems.each(function (i, el) {
-    var top = $(el).offset().top ;
-    // + $('.about-history_content').position().top;
-    var bottom = top + $(el).height();
-    //
-    var scroll = $(window).scrollTop();
-    var id = $(el).attr('id');
-    if (scroll > top && scroll < bottom) {
-      $('.about-history_date_link--active').removeClass('about-history_date_link--active');
-      $('.about-history_date_link[href="#' + id + '"]').addClass('about-history_date_link--active');
-    }
-  })
-});
-// $(window).scroll(function () {
-//   var historyItems = $('.about-history_content_item');
-//   historyItems.each(function (i, el) {
-//     var top = $(el).offset().top ;
-//     // + $('.about-history_content').position().top;
-//     var bottom = top + $(el).height();
-//     //
-//     var scroll = $(window).scrollTop();
-//     var id = $(el).attr('id');
-//     if (scroll > top && scroll < bottom) {
-//       $('.about-history_date_link--active').removeClass('about-history_date_link--active');
-//       $('.about-history_date_link[href="#' + id + '"]').addClass('about-history_date_link--active');
-//     }
-//   })
-// });
+      var top = $(el).offset().top;
+      // + $('.about-history_content').position().top;
+      var bottom = top + $(el).height();
+      //
+     
+      var id = $(el).attr('id');
+      if (top < anchor && anchor > bottom) {
+        $('.about-history_date_link--active').removeClass('about-history_date_link--active');
+        $('.about-history_date_link[href="#' + id + '"]').addClass('about-history_date_link--active');
+      }
+    })
+  });
 
-$(".about-history_date").on("click", ".about-history_date_link", function (event) {
-  // исключаем стандартную реакцию браузера
-  event.preventDefault();
 
-  // получем идентификатор блока из атрибута href
-  var id = $(this).attr('href');
+  $(".about-history_date").on("click", ".about-history_date_link", function (event) {
+    // исключаем стандартную реакцию браузера
+    event.preventDefault();
+
+    // получем идентификатор блока из атрибута href
+    var id = $(this).attr('href');
 
     // находим высоту, на которой расположен блок
-  let top = $(id).offset().top;
-  
-  // анимируем переход к блоку, время: 800 мс
-  $("body,html").animate({ scrollTop: top }, 800);
+    let top = $(id).position().top;
+    var scroll = $('.about-history_content').scrollTop();
+    if (top > scroll) {
+    var buf = top - scroll;
+  } else {
+    var buf = scroll - top;
+  }
+      // анимируем переход к блоку, время: 800 мс
+      $(".about-history_content").animate({ scrollTop: buf }, 800);
+  });
 });
+
 
 
 //галерея
@@ -210,7 +207,7 @@ $('.seasonal_sch-btn').click(function (event) {
 
 
 //настройка карты 
-
+if ($('div').is("#map")) {
 ymaps.ready(init);
 function init() {
   var myMap = new ymaps.Map("map", {
@@ -236,4 +233,5 @@ function init() {
 
   myMap.geoObjects
     .add(myPlacemarkWithContent);
+}
 }
