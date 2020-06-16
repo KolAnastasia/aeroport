@@ -171,11 +171,7 @@ $(document).ready(function () {
     // находим высоту, на которой расположен блок
     let top = $(id).position().top;
     var scroll = $('.about-history_content').scrollTop();
-    if (top > scroll) {
-    var buf = top - scroll;
-  } else {
-    var buf = scroll - top;
-  }
+    var buf = top + scroll;
       // анимируем переход к блоку, время: 800 мс
       $(".about-history_content").animate({ scrollTop: buf }, 800);
   });
