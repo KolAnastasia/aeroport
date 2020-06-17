@@ -21,31 +21,31 @@
         padding: 15px 20px;
         background: transparent;
 
-        font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: #FFFFFF;
 
         &::-webkit-input-placeholder {
             color: rgba(256, 256, 256, 0.5);
             font-weight: 14px;
-            font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         &::-moz-placeholder {
             color: rgba(256, 256, 256, 0.5);
             font-weight: 14px;
-            font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         &:-ms-input-placeholder {
             color: rgba(256, 256, 256, 0.5);
             font-weight: 14px;
-            font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         &:-moz-placeholder {
             color: rgba(256, 256, 256, 0.5);
             font-weight: 14px;
-            font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         &:active::placeholder {

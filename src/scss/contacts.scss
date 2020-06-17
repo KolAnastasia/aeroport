@@ -3,6 +3,8 @@
         display: flex;
         flex-wrap: wrap;
         padding-left: 45px;
+        max-width: 981px;
+        justify-content: space-between;
 
         &_item {
             max-width: 250px;
@@ -104,7 +106,7 @@
             margin-bottom: 30px;
 
             &_subtitle {
-                font-weight: 800;
+                font-weight: bold;
                 font-size: 14px;
                 text-transform: uppercase;
                 margin-bottom: 30px;
@@ -322,6 +324,7 @@
                 max-width: 410px;
                 border: 1px solid #DADADA;
                 border-radius: 5px;
+                font-family: 'Montserrat', sans-serif;
 
                 &-desc {
                     margin-top: 25px;

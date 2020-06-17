@@ -65,6 +65,13 @@ $(document).ready(function () {
     $('.page').removeClass('active');
   })
 
+  $('.window-visible').click(function () {
+    $('.header_menu-r').removeClass('active');
+    $('.window-visible').removeClass('active');
+    $('.page').removeClass ('active');
+    $('.header_menu-r').removeClass('active')
+  })
+
   $('.content-slider').slick({
     autoplay: true,
     dots: true,
@@ -136,8 +143,57 @@ if ($(window).width() < 981) {
     })
   });
 
+  $(document).ready(function () {
+    var height = $('.about-history_nav-wr').height();
+    $('.about-history_content').css("height", height);
+    var anchor = $('.scroll-anchor').offset().top + 255;
+    $('.about-history_content').scroll(function () {
+      var historyItems = $('.about-history_content_item');
+      historyItems.each(function (i, el) {
 
+        var top = $(el).offset().top;
+        // + $('.about-history_content').position().top;
+        var bottom = top + $(el).height();
+        //
+
+        var id = $(el).attr('id');
+        if (top < anchor && anchor > bottom) {
+          $('.about-history_date_link--active').removeClass('about-history_date_link--active');
+          $('.about-history_date_link[href="#' + id + '"]').addClass('about-history_date_link--active');
+        }
+      })
+    });
+
+
+    $(".about-history_date").on("click", ".about-history_date_link", function (event) {
+      // исключаем стандартную реакцию браузера
+      event.preventDefault();
+
+      // получем идентификатор блока из атрибута href
+      var id = $(this).attr('href');
+
+      // находим высоту, на которой расположен блок
+      let top = $(id).position().top;
+      var scroll = $('.about-history_content').scrollTop();
+      var buf = top + scroll;
+      // анимируем переход к блоку, время: 800 мс
+      $(".about-history_content").animate({ scrollTop: buf }, 800);
+    });
+  });
+
+  $(window).scroll(function () {
+
+    var target = $(this).scrollTop();
+    if (target > 100) {
+      $('.header').addClass('--fixed')
+    }
+
+    else {
+      $('.header').removeClass('--fixed')
+    }
+  });
 }
+
 //якоря на странице истории
 $(document).ready(function () {
   var height = $('.about-history_nav-wr').height();
@@ -151,7 +207,7 @@ $(document).ready(function () {
       // + $('.about-history_content').position().top;
       var bottom = top + $(el).height();
       //
-     
+
       var id = $(el).attr('id');
       if (top < anchor && anchor > bottom) {
         $('.about-history_date_link--active').removeClass('about-history_date_link--active');
@@ -172,8 +228,8 @@ $(document).ready(function () {
     let top = $(id).position().top;
     var scroll = $('.about-history_content').scrollTop();
     var buf = top + scroll;
-      // анимируем переход к блоку, время: 800 мс
-      $(".about-history_content").animate({ scrollTop: buf }, 800);
+    // анимируем переход к блоку, время: 800 мс
+    $(".about-history_content").animate({ scrollTop: buf }, 800);
   });
 });
 
@@ -204,30 +260,30 @@ $('.seasonal_sch-btn').click(function (event) {
 
 //настройка карты 
 if ($('div').is("#map")) {
-ymaps.ready(init);
-function init() {
-  var myMap = new ymaps.Map("map", {
-    center: [52.698286, 39.524596],
-    zoom: 13,
-  }),
+  ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map("map", {
+      center: [52.698286, 39.524596],
+      zoom: 13,
+    }),
 
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #3980D9; font-weight: bold; position: absolute; right: -100px; max-width: 100px; top: -15px;">$[properties.iconContent]</div>'
-    ),
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #3980D9; font-weight: bold; position: absolute; right: -100px; max-width: 100px; top: -15px;">$[properties.iconContent]</div>'
+      ),
 
-    myPlacemarkWithContent = new ymaps.Placemark([52.698286, 39.524596], {
-      iconContent: 'Липецк, аэропорт, ОГКП'
+      myPlacemarkWithContent = new ymaps.Placemark([52.698286, 39.524596], {
+        iconContent: 'Липецк, аэропорт, ОГКП'
 
-    }, {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: '../img/map-icon.png',
-      iconImageSize: [32, 38],
-      iconImageOffset: [-20, -15],
-      iconContentOffset: [15, 15],
-      iconContentLayout: MyIconContentLayout
-    });
+      }, {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '../img/map-icon.png',
+        iconImageSize: [32, 38],
+        iconImageOffset: [-20, -15],
+        iconContentOffset: [15, 15],
+        iconContentLayout: MyIconContentLayout
+      });
 
-  myMap.geoObjects
-    .add(myPlacemarkWithContent);
-}
+    myMap.geoObjects
+      .add(myPlacemarkWithContent);
+  }
 }
