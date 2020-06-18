@@ -300,7 +300,7 @@ if ($('div').is(".feedback-select_header")) {
 
       selectItem.each (function () {
         $(this).click(function () {
-          selectChoose();
+          selectChoose(this);
         });
       })
 
@@ -308,12 +308,12 @@ if ($('div').is(".feedback-select_header")) {
       $('.contacts-feedback_form_theme').toggleClass('active')
     }
 
-    function selectChoose() {
+    function selectChoose(option) {
       
-      let innerText = $(this).attr('value')
-      let currentText = $('.select__current').text();
-      console.log(innerText)
-      $('.innerText').text(currentText);
+      let value = $(option).attr('data-value')
+      let selectedText = $(option).text();
+      $('.select__current').text(selectedText);
+      selectToggle();
     }
   }
   
