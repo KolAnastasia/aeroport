@@ -310,7 +310,6 @@ if ($('div').is(".feedback-select_header")) {
 
     function selectChoose(option) {
       
-      let value = $(option).attr('data-value')
       let selectedText = $(option).text();
       $('.select__current').text(selectedText);
       selectToggle();
@@ -319,3 +318,22 @@ if ($('div').is(".feedback-select_header")) {
   
 select()
 }
+
+// let heightWrap = $('.main_online-wrap').height();
+// let point = $('.main_online-shelude_more').offset().top;
+// let scrollWin = point + heightWrap;
+
+// $(window).scroll(function() {
+			
+//   if($(window).scrollTop() > point && $(window).scrollTop() < scrollWin) {
+  
+//     element.addClass("fixed");
+
+//   } else {
+  
+//     element.removeClass("fixed");
+
+//   }
+
+// });
+
