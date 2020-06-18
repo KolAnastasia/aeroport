@@ -288,18 +288,7 @@
                 position: relative;
                 width: 100%;
                 max-width: 410px;
-                &:after {
-                    position: absolute;
-                    content: "";
-                    right: 20px;
-                    top: 50%;
-                    -webkit-transform: translateY(-50%);
-                    transform: translateY(-50%);
-                    width: 10px;
-                    height: 7px;
-                    background: url(../img/sl-arrow.svg) center no-repeat;
-                    pointer-events: none;
-                }
+
             }
 
             &_theme {
@@ -307,6 +296,65 @@
                 -moz-appearance: none;
                 appearance: none;
                 cursor: pointer;
+                position: relative;
+
+                .feedback-select_header {
+                    position: relative;
+                    border: 1px solid #DADADA;
+                    font-weight: bold;
+                    font-size: 12px;
+                    padding: 25px;
+                    text-transform: uppercase;
+                    width: 100%;
+                    max-width: 410px;
+                    border: 1px solid #DADADA;
+                    border-radius: 5px;
+                    font-family: 'Montserrat', sans-serif;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        right: 20px;
+                        top: 50%;
+                        -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                        width: 10px;
+                        height: 7px;
+                        background: url(../img/sl-arrow.svg) center no-repeat;
+                        pointer-events: none;
+                    }
+                }
+
+                .feedback-select_body {
+                    position: absolute;
+                    left: 0;
+                    display: none;
+                    right: 0;
+                    top: calc(100% - 3px);
+                    background-color: #ffffff;
+                    border: 1px solid #DADADA;
+                    z-index: 2;
+                    &_item {
+
+                        padding: 12px 25px 12px 25px;
+                        font-weight: bold;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        &:first-of-type {
+                            padding-top: 25px;
+                        }
+                    }
+
+                    &_item:hover {
+                        color: #3980D9;
+                    }
+                }
+
+                &.active {
+                    .feedback-select_body {
+                        display: block;
+                    }
+                }
             }
 
 

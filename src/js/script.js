@@ -68,7 +68,7 @@ $(document).ready(function () {
   $('.window-visible').click(function () {
     $('.header_menu-r').removeClass('active');
     $('.window-visible').removeClass('active');
-    $('.page').removeClass ('active');
+    $('.page').removeClass('active');
     $('.header_menu-r').removeClass('active')
   })
 
@@ -286,4 +286,36 @@ if ($('div').is("#map")) {
     myMap.geoObjects
       .add(myPlacemarkWithContent);
   }
+}
+
+if ($('div').is(".feedback-select_header")) {
+  let select = function () {
+
+    let selectHeader = $('.feedback-select_header');
+    let selectItem = $('.feedback-select_body_item');
+
+    selectHeader.click(function () {
+        selectToggle();
+      });
+
+      selectItem.each (function () {
+        $(this).click(function () {
+          selectChoose();
+        });
+      })
+
+    function selectToggle() {
+      $('.contacts-feedback_form_theme').toggleClass('active')
+    }
+
+    function selectChoose() {
+      
+      let innerText = $(this).attr('value')
+      let currentText = $('.select__current').text();
+      console.log(innerText)
+      $('.innerText').text(currentText);
+    }
+  }
+  
+select()
 }

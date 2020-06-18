@@ -29,7 +29,9 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
-
+            &:hover {
+                color: #000000;
+            }
             &--active {
                 color: #000000;
                 font-weight: bold;

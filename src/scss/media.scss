@@ -21,18 +21,19 @@
     margin-right: 65px;
   }
 
-  .seasonal_shelude_table_row td {
+  .seasonal_shelude_table_row div {
     padding-left: 15px;
   }
 }
 
 @media screen and (max-width: 981px) {
   .section_wrapper {
-      padding: 0 25px;
+    padding: 0 25px;
   }
 
   .header {
     transition: .3s ease-in-out;
+
     &.--fixed {
       position: fixed;
       background-color: #fff;
@@ -692,26 +693,45 @@
     min-width: auto;
   }
 
-  .seasonal_schedule_table-wrap {
-    background: #3980D9;
-    padding: 0 25px;
-    width: calc(100% + 50px);
-    margin-left: -25px;
-  }
 
+ 
   .seasonal_shelude_table_row {
     display: flex;
-    flex-direction: column;
     margin: 20px 0;
-    background-color: #ffffff;
-    td {
-      padding: 5px 0 5px 30px;
-      &:first-of-type {
-        padding-top: 20px;
+    background-color: #f8f8f8;
+    align-items: flex-start;
+
+    &_time {
+      flex-direction: column;
+      min-width: 35px;
+      width: 10%;
+
+      div:first-of-type {
+        padding: 25px 0 10px 15px;
       }
 
-      &:last-of-type {
-        padding-bottom: 20px;
+      div:last-of-type {
+        padding: 5px 0 25px 15px;
+      }
+    }
+
+    &_right {
+      flex-direction: column;
+
+      div {
+        padding: 0 0 10px 15px;
+      }
+
+      div:first-of-type {
+        padding: 25px 0 0 15px;
+        margin-bottom: 10px;
+      }
+
+      div:nth-of-type(2n) {
+        font-weight: normal;
+      }
+      div:last-of-type {
+        padding: 5px 0 25px 15px;
       }
     }
   }
@@ -719,6 +739,29 @@
   .seasonal_shelude_table_title {
     display: none;
   }
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+  .main_online-wrap {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.main_online-shelude_table.active {
+  margin-right: 10px;
+}
+
+.main_online-shelude_more {
+  position: sticky;
+  top: 150px;
+  max-width: 286px;
+  max-height: max-content;
+}
+
+.main_online-shelude_more_wrap_btn {
+  min-width: 250px;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -818,7 +861,7 @@
       }
 
       &_subscr_btn {
-        margin-top: 20px;  
+        margin-top: 20px;
         max-width: 375px;
         width: 100%;
         min-width: auto;
