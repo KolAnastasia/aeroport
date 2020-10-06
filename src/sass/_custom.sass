@@ -1,0 +1,428 @@
+@import 'variables';
+
+// 1. Your custom variables and variable overwrites.
+
+body 
+    font-family: 'Circe', Arial, sans-serif
+    font-weight: normal
+    position: relative
+    padding: 0
+    margin: 0
+    line-height: 1.5
+    font-size: 18px
+
+.container
+    max-width: 1180px
+    overflow: hidden 
+    margin: 0 auto
+    padding: 0 25px 
+
+* 
+    min-height: 0
+    min-width: 0
+    box-sizing: border-box
+
+*:focus 
+    outline: none
+
+
+.main_subtitle 
+    font-size: 48px
+    line-height: 56px
+    text-transform: uppercase
+    color: $dark
+    margin: 0 
+
+.btn--arrow 
+    font-size: 18px
+    line-height: 21px
+    text-decoration: none 
+    color: #000000
+    display: flex 
+    align-items: center 
+    justify-content: flex-start
+    width: 164px
+    span 
+        display: inline-block
+        margin-right: 15px
+        transition: .2s
+    &:hover 
+        span 
+            margin-right: 25px
+            transition: .2s
+.header 
+    &_top
+        &-menu 
+            background-color: $wine
+            padding: 20px 0
+            color: #ffffff
+            font-size: 14px
+            &-wr 
+                display: flex
+                align-items: center                
+                justify-content: space-between
+                align-items: center
+            &-main 
+                display: flex
+                align-items: center                
+                justify-content: space-between
+                align-items: center
+                width: 70%
+                a 
+                    display: flex
+                    align-items: center
+                    color: #ffffff 
+                    text-decoration: none 
+                    position: relative
+                    &::after
+                        position: absolute
+                        max-width: 0
+                        width: 100%
+                        content: "" 
+                        background-color: #ffffff
+                        height: 2px
+                        left: 0
+                        bottom: -1px
+                        transition: .2s
+                    span 
+                        display: inline-block
+                        margin-right: 7px
+                          
+            &-right 
+                display: flex
+                align-items: center                
+                justify-content: space-between
+                align-items: center
+                width: 100%
+                max-width: 250px
+                a 
+                    color: #ffffff
+                    text-decoration: none 
+                    font-weight: bold
+                    svg 
+                        margin-right: 8px
+            &-search 
+                display: flex
+                align-items: center
+
+    &_bottom-menu 
+        padding: 21px 0
+        position: relative
+        &_container
+            display: flex 
+            align-items: center 
+            justify-content: space-between
+        &_mob-icon
+            display: none
+        &_wr 
+            width: 100%
+            max-width: 670px
+            nav 
+                ul 
+                    display: flex 
+                    align-items: center 
+                    justify-content: space-between 
+                    padding: 0 
+                    margin: 0
+                    margin-left: 10px
+                    list-style: none
+                    li 
+                        a 
+                            font-weight: bold
+                            font-size: 18px
+                            line-height: 27px
+                            color: $dark
+                            padding: 5px 
+                            transition: .2s
+                            text-decoration: none 
+                            &:hover 
+                                color: $wine
+                                transition: .2s
+
+.mob-menu_sandwich
+    width: 40px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    .bar 
+        height: 2px 
+        transition: .3s
+        background: $dark
+        width: 100%
+        max-width: 100%
+        &1
+            margin-bottom: 6px
+    &.active 
+        .bar
+            background: $coral
+            transition: .3s
+            &2
+                max-width: 29px
+                width: 100%
+                transition: .3s
+
+.btn--coral    
+    margin-left: 25px 
+    padding: 13px 30px 
+    background-color: $coral 
+    color: #ffffff 
+    text-decoration: none
+    font-size: 14px 
+    font-weight: bold 
+    transition: .2s
+    display: inline-block
+    &:hover 
+        transition: .2s
+        background-color: $wine
+.overflow 
+    max-height: 100vh 
+    overflow: hidden
+
+.mob-menu
+    &_container
+        position: absolute
+        top: 100% 
+        min-height: 100vh
+        background-color: #ffffff
+        left: 100% 
+        max-width: 0
+        transition: .4s
+        overflow: hidden
+        right: 0
+        width: 100%
+        z-index: 99
+        border-top: 1px solid #e5e5e5
+        padding-bottom: 110px
+        &_wr 
+            margin: 0 
+            list-style: none 
+            padding: 0
+            margin-bottom: 36px
+            li 
+                a 
+                    display: block
+                    padding: 16px 25px
+                    border-bottom: 1px solid #e5e5e5
+                    color: $dark 
+                    text-decoration: none 
+                    font-weight: bold
+        &_cheme 
+            margin-left: 25px 
+            display: flex 
+            max-width: 177px 
+            justify-content: center
+            margin-bottom: 35px
+            svg 
+                margin-right: 8px
+                margin-top: 2px
+        &.active  
+            max-width: 100% 
+            left: 0
+            transition: .4s
+            overflow: visible
+
+    &_contacts
+        padding-left: 25px 
+        color: $dark 
+        padding-right: 25px
+        &_item 
+            display: flex 
+            align-items: center 
+            max-width: 300px 
+            margin-bottom: 15px 
+            svg 
+                margin-right: 15px
+            a 
+                color: $dark 
+                text-decoration: none
+            &:last-of-type
+                margin-bottom: 0
+
+
+
+
+.header_top-menu-main a:hover::after
+    max-width: 100% 
+    transition: .2s
+
+.multiple-rows 
+    grid-row: span 2
+
+.footer 
+    &_wr 
+        background-color: #F9F9F9         
+        padding: 48px 0
+        .container 
+            display: flex
+            justify-content: space-between
+
+    &-bottom 
+        background-color: #F0F0F0
+        padding: 20px
+        .container 
+            display: flex 
+            align-items: center 
+            justify-content: space-between
+            font-size: 12px
+            line-height: 18px
+            color: #828282
+            a 
+                font-weight: bold
+                font-size: 12px
+                line-height: 18px
+                align-items: center
+                text-decoration-line: underline
+                color: #828282
+                transition: .2s
+                &:hover 
+                    transition: .2s
+                    color: $wine
+        
+    &_subtitle
+        font-weight: bold
+        font-size: 14px
+        align-items: center
+        color: $dark
+        svg 
+            margin-right: 5px
+    &_time 
+        display: inline-block 
+        margin-left: 20px
+        font-size: 12px
+        line-height: 18px
+        color: #9E9E9E
+    &_tel 
+        font-size: 12px
+        display: inline-block 
+        margin-left: 20px
+        text-decoration: none 
+        color: #9E9E9E
+        transition: .2s
+        &:hover 
+            color: $wine 
+            transition: .2s
+    &_follow-wr
+        display: flex 
+        align-items: center
+        justify-content: space-between
+    &_follow 
+        &_soc 
+            display: flex 
+            a 
+                text-decoration: none 
+                padding: 16px
+                margin-right: 16px 
+                display: flex 
+                background-color: transparent 
+                transition: .2s
+                border: 1px solid #E5E5E5
+                align-items: center
+                &:last-of-type
+                    margin-right: 0
+                &:hover 
+                    background-color: #e5e5ee 
+                    transition: .2s
+            &_fb                 
+                padding: 16px 19px !important
+
+        form 
+            display: flex
+            margin-right: 20px
+            input 
+                padding: 15px 
+                border: 1px solid #E5E5E5
+                background: transparent
+                font-family: 'Circe', Arial, Helvetica, sans-serif
+                &::placeholder 
+                    font-size: 12px
+                    line-height: 18px
+                    color: #C4C4C4
+                    font-family: 'Circe', Arial, Helvetica, sans-serif
+                &:focus::placeholder 
+                    color: transparent 
+            button 
+                background: #E40045
+                font-weight: bold
+                font-size: 14px
+                line-height: 21px
+                color: #FFFFFF
+                padding: 14px 48px
+                border: none
+                cursor: pointer 
+                transition: .2s
+                &:hover 
+                    background-color: #7a0625
+                    transition: .2s
+            
+.breadcrumb 
+    background-color: #F9F9F9
+    padding: 37px 0
+    margin-bottom: 55px
+    .inner-title
+        font-family: Circe
+        font-size: 48px
+        text-transform: uppercase
+        color: $dark
+        margin: 0 
+        margin-bottom: 5px
+    &-wr 
+        ul 
+            list-style: none 
+            padding: 0 
+            margin: 0
+            display: flex 
+            font-size: 14px 
+            li 
+                margin-right: 20px 
+                position: relative
+                cursor: pointer
+                &:after 
+                    content: "" 
+                    position: absolute 
+                    top: 50% 
+                    transform: translateY(-50%)
+                    right: -13px 
+                    height: 2px 
+                    width: 7px 
+                    background-color: #C4C4C4
+                &:last-of-type
+                    margin-right: 0 
+                    cursor: initial
+                    &:after
+                        display: none
+                a 
+                    display: inline-block 
+                    text-decoration: none 
+                    color: #C4C4C4
+                    transition: .2s
+                    &:hover 
+                        color: #000000
+                        transition: .2s
+                span 
+                    color: $coral
+
+#contacts-map 
+    margin-bottom: 64px 
+
+main
+    padding-bottom: 130px
+
+.footer-bottom .container a.footer-bottom_dev 
+    text-decoration: none 
+    font-weight: 800
+    font-size: 12px
+    line-height: 18px
+    color: #828282
+    text-decoration: none 
+    transition: .2s
+    &:hover 
+        color: #f0303d
+        transition: .2s
+
+// 3. Your custom mixin overwrites.
+@import 'variables';
+@import 'slick-carousel/slick/slick-theme.scss';
+@import 'slick-carousel/slick/slick.scss';
+@import '../../node_modules/air-datepicker/dist/css/datepicker.css';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
+

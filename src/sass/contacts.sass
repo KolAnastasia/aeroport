@@ -1,0 +1,55 @@
+.contacts
+    &_top
+        display: flex
+        align-items: center 
+        margin-bottom: 64px
+        &--left   
+            width: 40% 
+        &_item
+            margin-bottom: 48px
+            &:last-of-type 
+                margin-bottom: 0
+            &_subtitle 
+                display: flex 
+                align-items: center 
+                font-weight: 800
+                font-size: 14px
+                line-height: 21px
+                text-transform: uppercase
+                color: #C4C4C4
+                margin-bottom: 8px 
+                svg 
+                    margin-right: 5px
+            &_content 
+                font-weight: bold
+                font-size: 18px
+                color: $dark
+                a 
+                    display: block 
+                    font-weight: bold
+                    font-size: 18px 
+                    color: $dark
+                    text-decoration: none
+        &_banner 
+            width: 60% 
+            img 
+                width: 100%
+    &_dep 
+        &_item 
+            padding-bottom: 16px 
+            border-bottom: 1px solid  $dark
+            display: flex 
+            justify-content: space-between 
+            align-items: center
+            margin-bottom: 36px
+            &_name 
+                color: $dark
+                margin-right: 20px
+            a 
+                text-decoration: none 
+                transition: .2s
+                color: $wine
+                min-width: fit-content
+                &:hover 
+                    transition: .2s
+                    color: $dark

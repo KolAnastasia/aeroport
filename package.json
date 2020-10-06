@@ -34,7 +34,6 @@
     "sass": "^1.26.5",
     "slick-carousel": "^1.8.1",
     "style-loader": "^0.21.0",
-    "vue": "^2.6.11",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
   },

@@ -1,0 +1,292 @@
+.main_banner 
+    position: relative
+    margin-bottom: 70px
+    img 
+        width: 100% 
+        height: auto
+        object-fit: cover
+    &_content 
+        display: flex 
+        position: absolute
+        width: 100% 
+        max-width: 1180px
+        justify-content: flex-end
+        left: 0 
+        right: 0 
+        margin: 0 auto
+        top: 50% 
+        transform: translateY(-50%)
+        h1 
+            font-size: 60px
+            line-height: 1.3
+            text-transform: uppercase
+            color: #FFFFFF
+            max-width: 685px 
+            font-weight: normal
+            margin: 0 
+            span 
+                font-weight: 800
+
+.main_slider-promo
+    display: grid 
+    grid-template-columns: 1.8fr 1fr
+    grid-gap: 21px
+    margin-bottom: 100px 
+    img 
+        height: 100% 
+        width: 100%
+        object-fit: cover
+    &_slider
+        &-wr
+            position: relative
+        &-controls 
+            position: absolute
+            width: 100%
+            bottom: -45px
+            left: 0
+            right: 0
+            display: flex 
+            align-items: center 
+            justify-content: space-between
+        &_item
+            display: flex
+        &-content 
+            height: 100%
+            .slick-list.draggable 
+                height: 100%
+                .slick-track, .slick-list 
+                    height: 100%
+                    div 
+                        height: 100%
+        &-arrows 
+            display: flex
+
+        &-dots
+            .slick-dots 
+                bottom: 0
+                text-align: left 
+                max-width: fit-content
+                li 
+                    button
+                        background-color: #e5e5e5
+                        border-radius: 50%
+                        width: 8px 
+                        height: 8px
+                        &:before 
+                            display: none
+                li.slick-active 
+                    button 
+                        background-color: $coral
+    &_small
+        display: flex
+    &-next  
+        margin-left: 55px
+    &-arrow 
+        cursor: pointer
+        &:hover 
+            svg path 
+                stroke: $wine
+
+.slick-dotted.slick-slider 
+    margin-bottom: 0
+
+.inner-subtitle 
+    font-weight: bold
+    font-size: 36px
+    line-height: 53px
+    color: $dark
+
+.main_new_top
+    display: flex 
+    align-items: baseline 
+    margin-bottom: 64px
+    justify-content: space-between
+    &--left
+        display: flex 
+        align-items: baseline
+        width: 75%
+        justify-content: space-between
+        .tabs_dots 
+            display: flex 
+            align-items: center 
+            list-style: none 
+            padding: 0             
+            width: 55%
+            justify-content: space-between
+            margin: 0
+            li 
+                cursor: pointer 
+                font-size: 18px
+                line-height: 21px
+                color: #C4C4C4                
+                border-bottom: 2px solid transparent
+                font-weight: bold
+                &.active 
+                    color: $dark
+                    border-bottom: 2px solid #E40045
+                &:hover 
+                    color: $dark
+                    transition: .2s
+
+
+.main_new 
+    margin-bottom: 130px
+    &_content 
+        &_item 
+            a 
+                font-weight: bold
+                font-size: 24px
+                line-height: 35px
+                color: $dark
+                text-decoration: none
+                transition: .2s
+                margin-bottom: 4px
+                img 
+                    width: 100%
+                    margin-bottom: 35px
+                &:hover                     
+                    color: #E40045
+                    transition: .2s
+            &_desc
+                margin: 4px 0 27px 0 
+            &_info 
+                display: flex 
+                align-items: center 
+                font-size: 14px
+                line-height: 1.5
+                color: $dark
+                svg 
+                    margin-right: 9px 
+                &_section 
+                    display: flex 
+                    align-items: center 
+                    margin-right: 40px
+                &_date 
+                    display: flex 
+                    align-items: center 
+
+.main_about 
+    background-color: $wine
+    color: #ffffff
+    padding: 100px 0
+    background-image: url(../img/bird-decor.svg)
+    background-position: bottom
+    margin-bottom: 130px
+    background-repeat: no-repeat
+    &_top 
+        display: flex
+        margin-bottom: 85px
+        &_subtitle 
+            padding: 50px 70px 
+            border: 10px solid #ffffff
+            width: 50% 
+            max-width: 503px
+            margin-right: 100px
+            text-transform: uppercase
+            display: flex
+            justify-content: center
+            align-items: center
+            h2 
+                margin: 0                
+                font-weight: 800
+                font-size: 48px
+                line-height: 71px
+        &_content 
+            width: 50%
+            font-weight: bold
+            font-size: 24px
+            line-height: 35px
+    &_bottom
+        display: grid 
+        grid-template-columns: 1fr 1fr 1fr 1fr 
+        grid-gap: 20px 
+        &_floor 
+            font-size: 36px
+            margin-bottom: 20px 
+        &_desc 
+
+
+
+.main_advatages
+    &_top 
+        display: flex 
+        align-items: center 
+        justify-content: space-between
+        margin-bottom: 68px
+        .advantages-dots 
+            display: flex 
+            align-items: center 
+            list-style: none 
+            padding: 0    
+            justify-content: space-between
+            margin: 0
+            li 
+                cursor: pointer 
+                font-size: 18px
+                line-height: 21px
+                color: #C4C4C4
+                font-weight: bold
+                margin-right: 48px 
+                position: relative
+                border-bottom: 2px solid transparent
+                &.active 
+                    color: $dark
+                    border-bottom: 2px solid #E40045
+                &:hover 
+                    color: $dark
+                    transition: .2s
+                &:last-of-type
+                    margin-right: 0
+    &_slider
+        &-counter
+            line-height: 1
+            position: absolute
+            top: 25px
+
+            &-active 
+                font-weight: 800
+                font-size: 48px
+                text-transform: uppercase
+                color: $coral
+                line-height: 1
+            &-all 
+                display: inline-block 
+                padding-left: 8px 
+                position: relative  
+                font-size: 24px
+                line-height: 28px          
+                font-weight: bold   
+                line-height: 1
+                &:before 
+                    content: ""
+                    position: absolute 
+                    width: 3px 
+                    height: 20px 
+                    bottom: 5px 
+                    left: 0 
+                    background-color: $dark
+
+        &_item
+            display: flex !important
+            &_content 
+                padding-top: 120px
+                margin-right: 80px
+                width: 50% 
+            img 
+                width: 50%
+        &-control
+            position: absolute
+        &-wr
+            position: relative
+
+
+.dots-content
+    display: none 
+    &.active 
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+        grid-gap: 60px 20px
+
+.main_advatages_slider-wr 
+    &.active 
+        display: block !important
